@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/oil_sand",
+    "up": "factorocraft:block/oil_well",
+    "north": "factorocraft:block/oil_sand",
+    "east": "factorocraft:block/oil_sand",
+    "south": "factorocraft:block/oil_sand",
+    "west": "factorocraft:block/oil_sand",
+    "particle": "factorocraft:block/oil_well"
+  }
+}

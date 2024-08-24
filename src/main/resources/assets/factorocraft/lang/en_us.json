@@ -1,0 +1,15 @@
+{
+  "item.factorocraft.fuel": "Fuel",
+  "item.factorocraft.nuclear_fuel": "Nuclear Fuel",
+
+  "block.factorocraft.copper_ore_vein": "Copper Ore Vein",
+  "block.factorocraft.iron_ore_vein": "Iron Ore Vein",
+  "block.factorocraft.coal_ore_vein": "Coal Ore Vein",
+  "block.factorocraft.tin_ore_vein": "Tin Ore Vein",
+  "block.factorocraft.uranium_ore_vein": "Uranium Ore Vein",
+  "block.factorocraft.stone_vein": "Stone Vein",
+  "block.factorocraft.redstone_ore_vein": "Redstone Ore Vein",
+  "block.factorocraft.oil_well": "Oil Well",
+  "block.factorocraft.oil_sand": "Oil Sand",
+  factorocraft:oil_well_six
+}

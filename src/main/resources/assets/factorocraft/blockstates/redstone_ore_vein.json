@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "factorocraft:block/redstone_ore_vein"
+    }
+  }
+}

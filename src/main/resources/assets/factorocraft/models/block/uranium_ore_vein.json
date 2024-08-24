@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/uranium_ore_vein",
+    "up": "factorocraft:block/uranium_ore_vein",
+    "north": "factorocraft:block/uranium_ore_vein",
+    "east": "factorocraft:block/uranium_ore_vein",
+    "south": "factorocraft:block/uranium_ore_vein",
+    "west": "factorocraft:block/uranium_ore_vein",
+    "particle": "factorocraft:block/uranium_ore_vein"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/stone_vein",
+    "up": "factorocraft:block/stone_vein",
+    "north": "factorocraft:block/stone_vein",
+    "east": "factorocraft:block/stone_vein",
+    "south": "factorocraft:block/stone_vein",
+    "west": "factorocraft:block/stone_vein",
+    "particle": "factorocraft:block/stone_vein"
+  }
+}
