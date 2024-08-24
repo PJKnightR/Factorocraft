@@ -18,7 +18,6 @@ public class ModEvents {
 
         @SubscribeEvent
         public static void onBreak(BlockEvent.BreakEvent event) {
-            System.out.println("Break Event");
 
             BlockEntity blockEntity = event.getWorld().getBlockEntity(event.getPos());
             if (blockEntity instanceof OreVeinEntity) {
@@ -27,6 +26,14 @@ public class ModEvents {
                     event.setCanceled(true);
                     event.getWorld().removeBlock(blockEntity.getBlockPos(), false);
                     event.getWorld().setBlock(blockEntity.getBlockPos(), blockEntity.getBlockState(), 2);
+
+                    //In case I do make the ore veins finite
+                    /*if (oreVein.getOreAmount() >= 1) {
+                    //oreVein.setOreAmount(oreVein.getOreAmount());
+                    //oreVein.setOreAmount(oreVein.getOreAmount() - 1);
+                    //To-do: Drop Raw Ore (player or machine)
+                    //event.setCanceled(true);
+                    }*/
 
                     if (blockEntity instanceof CopperOreVeinEntity) {
                         ((CopperOreVeinEntity) blockEntity).dropItem((Level) event.getWorld(), new ItemStack(Items.RAW_COPPER));
@@ -45,34 +52,6 @@ public class ModEvents {
                     }
                 }
             }
-
-            //BlockEntity blockEntity = event.getWorld().getBlockEntity(event.getPos());
-            //if (blockEntity instanceof OreVeinEntity) {
-
-                /*OreVeinEntity oreVein = (OreVeinEntity) blockEntity;
-                if (oreVein.getOreAmount() >= 1) {
-                    //oreVein.setOreAmount(oreVein.getOreAmount());
-                    //oreVein.setOreAmount(oreVein.getOreAmount() - 1);
-                    //To-do: Drop Raw Ore (player or machine)
-                    //event.setCanceled(true);
-                }*/
-
-                //event.setCanceled(true);
-                //oreVein.saveAdditional(new CompoundTag());
-                //oreVein.dropItem((Level) event.getWorld());
-                //System.out.println(oreVein.drop);
-                //event.getWorld().addFreshEntity(new ItemEntity((Level) event.getWorld(), oreVein.getBlockPos().getX(), oreVein.getBlockPos().getY(), oreVein.getBlockPos().getZ(), oreVein.drop));
-
-                //ItemEntity(pLevel,pEntityLiving.getX(),pEntityLiving.getY(), pEntityLiving.getZ(), pStack.copy());
-
-                //event.getWorld().removeBlock(oreVein.getBlockPos(), false);
-                //oreVein.getBlockState().setValue("amount", oreVein.getOreAmount() - 1);
-                //event.getWorld().setBlock(oreVein.getBlockPos(), oreVein.getBlockState(), 2);
-                //event.getWorld().getBlockEntity(oreVein.getBlockPos()).saveWithFullMetadata();
-
-                //System.out.println("Remaining Ore: " + oreVein.getOreAmount());
-            //}
         }
-
     }
 }
