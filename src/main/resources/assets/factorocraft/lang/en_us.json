@@ -10,9 +10,13 @@
   "item.factorocraft.raw_tin": "Raw Tin",
   "item.factorocraft.raw_uranium": "Raw Uranium",
   "item.factorocraft.plastic": "Plastic",
+  "item.factorocraft.explosives": "Explosives",
   "item.factorocraft.electric_motor": "Electric Motor",
   "item.factorocraft.fuel": "Fuel",
   "item.factorocraft.nuclear_fuel": "Nuclear Fuel",
+  "item.factorocraft.low_density_structure": "Low Density Structure",
+  "item.factorocraft.rocket_control_unit": "Rocket Control Unit",
+  "item.factorocraft.rocket_part": "Rocket Part",
 
   "block.factorocraft.copper_ore_vein": "Copper Ore Vein",
   "block.factorocraft.iron_ore_vein": "Iron Ore Vein",
