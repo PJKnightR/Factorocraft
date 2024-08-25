@@ -1,4 +1,16 @@
 {
+  "item.factorocraft.science_pack_automation": "Automation Science Pack",
+  "item.factorocraft.science_pack_logistic": "Logistic Science Pack",
+  "item.factorocraft.science_pack_chemical": "Chemical Science Pack",
+  "item.factorocraft.science_pack_military": "Military Science Pack",
+  "item.factorocraft.science_pack_production": "Production Science Pack",
+  "item.factorocraft.science_pack_utility": "Utility Science Pack",
+  "item.factorocraft.science_pack_space": "Space Science Pack",
+  "item.factorocraft.stone_chunk": "Stone Chunk",
+  "item.factorocraft.raw_tin": "Raw Tin",
+  "item.factorocraft.raw_uranium": "Raw Uranium",
+  "item.factorocraft.plastic": "Plastic",
+  "item.factorocraft.electric_motor": "Electric Motor",
   "item.factorocraft.fuel": "Fuel",
   "item.factorocraft.nuclear_fuel": "Nuclear Fuel",
 
@@ -10,6 +22,5 @@
   "block.factorocraft.stone_vein": "Stone Vein",
   "block.factorocraft.redstone_ore_vein": "Redstone Ore Vein",
   "block.factorocraft.oil_well": "Oil Well",
-  "block.factorocraft.oil_sand": "Oil Sand",
-  factorocraft:oil_well_six
+  "block.factorocraft.oil_sand": "Oil Sand"
 }
