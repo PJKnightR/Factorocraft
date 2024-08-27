@@ -40,6 +40,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> ELECTRIC_MOTOR = ITEMS.register("electric_motor", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> SOLID_FUEL = ITEMS.register("solid_fuel", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
     public static final RegistryObject<Item> FUEL = ITEMS.register("fuel", () -> new FuelItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> NUCLEAR_FUEL = ITEMS.register("nuclear_fuel", () -> new NuclearFuelItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
