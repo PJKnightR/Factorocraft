@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "factorocraft:copper_ore_vein",
+    "factorocraft:iron_ore_vein",
+    "factorocraft:coal_ore_vein",
+    "factorocraft:tin_ore_vein",
+    "factorocraft:redstone_ore_vein",
+    "factorocraft:uranium_ore_vein",
+    "factorocraft:stone_vein"
+  ]
+}

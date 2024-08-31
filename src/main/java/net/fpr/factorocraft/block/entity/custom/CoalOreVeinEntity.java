@@ -1,5 +1,6 @@
 package net.fpr.factorocraft.block.entity.custom;
 
+import net.fpr.factorocraft.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +13,7 @@ public class CoalOreVeinEntity extends OreVeinEntity {
     public ItemStack drop = new ItemStack(Items.COAL);
 
     public CoalOreVeinEntity(BlockPos pWorldPosition, BlockState pBlockState) {
-        super(pWorldPosition, pBlockState);
+        super(ModBlockEntities.COAL_ORE_VEIN_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
     }
 
     public CoalOreVeinEntity(BlockEntityType<?> entityType, BlockPos pWorldPosition, BlockState pBlockState) {

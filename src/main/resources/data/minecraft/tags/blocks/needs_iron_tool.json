@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "factorocraft:redstone_ore_vein",
+    "factorocraft:uranium_ore_vein"
+  ]
+}

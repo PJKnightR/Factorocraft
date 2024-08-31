@@ -11,21 +11,25 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class OreVeinEntity extends BlockEntity {
     //public int oreAmount = -1;
+    //protected BlockEntityType<?> entityType;
 
-    public OreVeinEntity(BlockPos pWorldPosition, BlockState pBlockState) {
+    /*public OreVeinEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.COPPER_ORE_VEIN_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
         //oreAmount = -1;
         load(new CompoundTag());
-    }
+    }*/
 
     public OreVeinEntity(BlockEntityType<?> entityType, BlockPos pWorldPosition, BlockState pBlockState) {
         super(entityType, pWorldPosition, pBlockState);
         //oreAmount = -1;
-        load(new CompoundTag());
+        //load(new CompoundTag());
     }
 
     protected void dropItem(Level level, ItemStack itemstack) {}
 
+    /*public void setEntityType(BlockEntityType<?> entityType) {
+        this.entityType = entityType;
+    }*/
     //Unused
     /*public void saveAdditional(CompoundTag nbt) {
         System.out.println("Save Test");

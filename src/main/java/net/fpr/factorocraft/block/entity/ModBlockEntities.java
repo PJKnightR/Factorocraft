@@ -28,19 +28,19 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(CoalOreVeinEntity::new,
                             ModBlocks.COAL_ORE_VEIN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<OreVeinEntity>> TIN_ORE_VEIN_BLOCK_ENTITY =
+    public static final RegistryObject<BlockEntityType<TinOreVeinEntity>> TIN_ORE_VEIN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("tin_ore_vein_block_entity", () ->
-                    BlockEntityType.Builder.of(OreVeinEntity::new,
+                    BlockEntityType.Builder.of(TinOreVeinEntity::new,
                             ModBlocks.TIN_ORE_VEIN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<OreVeinEntity>> URANIUM_ORE_VEIN_BLOCK_ENTITY =
+    public static final RegistryObject<BlockEntityType<UraniumOreVeinEntity>> URANIUM_ORE_VEIN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("uranium_ore_vein_block_entity", () ->
-                    BlockEntityType.Builder.of(OreVeinEntity::new,
+                    BlockEntityType.Builder.of(UraniumOreVeinEntity::new,
                             ModBlocks.URANIUM_ORE_VEIN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<OreVeinEntity>> STONE_VEIN_BLOCK_ENTITY =
+    public static final RegistryObject<BlockEntityType<StoneVeinEntity>> STONE_VEIN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("stone_vein_block_entity", () ->
-                    BlockEntityType.Builder.of(OreVeinEntity::new,
+                    BlockEntityType.Builder.of(StoneVeinEntity::new,
                             ModBlocks.STONE_VEIN.get()).build(null));
 
     public static final RegistryObject<BlockEntityType<RedstoneOreVeinEntity>> REDSTONE_ORE_VEIN_BLOCK_ENTITY =

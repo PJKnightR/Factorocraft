@@ -27,28 +27,28 @@ public class ModBlocks {
             () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);*/
 
     public static final RegistryObject<Block> COPPER_ORE_VEIN = registerBlock("copper_ore_vein",
-            () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     /*public static final RegistryObject<Block> COPPER_ORE_VEIN_TEST = registerBlock("copper_ore_vein_test",
             () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()), CreativeModeTab.TAB_MISC);*/
 
     public static final RegistryObject<Block> IRON_ORE_VEIN = registerBlock("iron_ore_vein",
-            () -> new IronOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new IronOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> COAL_ORE_VEIN = registerBlock("coal_ore_vein",
-            () -> new CoalOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new CoalOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> TIN_ORE_VEIN = registerBlock("tin_ore_vein",
-            () -> new TinOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new TinOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> URANIUM_ORE_VEIN = registerBlock("uranium_ore_vein",
-            () -> new UraniumOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new UraniumOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> STONE_VEIN = registerBlock("stone_vein",
-            () -> new StoneVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new StoneVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> REDSTONE_ORE_VEIN = registerBlock("redstone_ore_vein",
-            () -> new RedstoneOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_MISC);
+            () -> new RedstoneOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
 
     public static final RegistryObject<Block> OIL_WELL = registerBlock("oil_well",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(-1.0F, 3600000.0F).noDrops()), CreativeModeTab.TAB_MISC);
