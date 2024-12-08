@@ -1,8 +1,10 @@
 package net.fpr.factorocraft.item;
 
 import net.fpr.factorocraft.Factorocraft;
+import net.fpr.factorocraft.fluid.ModFluids;
 import net.fpr.factorocraft.item.custom.FuelItem;
 import net.fpr.factorocraft.item.custom.NuclearFuelItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -51,6 +53,10 @@ public class ModItems {
     public static final RegistryObject<Item> ROCKET_CONTROL_UNIT = ITEMS.register("rocket_control_unit", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> ROCKET_PART = ITEMS.register("rocket_part", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> LUBRICANT_BUCKET = ITEMS.register("lubricant_bucket",
+            () -> new BucketItem(ModFluids.LUBRICANT_FLUID,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

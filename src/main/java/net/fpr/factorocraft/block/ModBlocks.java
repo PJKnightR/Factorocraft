@@ -23,14 +23,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Factorocraft.MOD_ID);
 
-    /*public static final RegistryObject<Block> COPPER_ORE_VEIN = registerBlock("copper_ore_vein",
-            () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);*/
-
     public static final RegistryObject<Block> COPPER_ORE_VEIN = registerBlock("copper_ore_vein",
             () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
-
-    /*public static final RegistryObject<Block> COPPER_ORE_VEIN_TEST = registerBlock("copper_ore_vein_test",
-            () -> new CopperOreVein(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()), CreativeModeTab.TAB_MISC);*/
 
     public static final RegistryObject<Block> IRON_ORE_VEIN = registerBlock("iron_ore_vein",
             () -> new IronOreVein(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6.0F, 1200.0F)), CreativeModeTab.TAB_MISC);
