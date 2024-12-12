@@ -3,63 +3,80 @@ package net.fpr.factorocraft;
 import com.mojang.logging.LogUtils;
 import net.fpr.factorocraft.block.ModBlocks;
 import net.fpr.factorocraft.block.entity.ModBlockEntities;
-import net.fpr.factorocraft.fluid.ModFluids;
-import net.fpr.factorocraft.item.ModItems;
-import net.fpr.factorocraft.world.structure.ModStructures;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.fpr.factorocraft.config.ModConfigs;
+import net.fpr.factorocraft.worldgen.features.ModFeatures;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.fpr.factorocraft.item.ModCreativeModTabs;
+import net.fpr.factorocraft.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Factorocraft.MOD_ID)
 public class Factorocraft
 {
+    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "factorocraft";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Factorocraft()
     {
-        // Register the setup method for modloading
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModLoadingContext modLoadingContext = ModLoadingContext.get();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
-        ModFluids.register(eventBus);
+        ModCreativeModTabs.register(modEventBus);
 
-        ModBlockEntities.register(eventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
-        ModStructures.register(eventBus);
+        ModBlockEntities.register(modEventBus);
 
-        eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
+        ModConfigs.register(modLoadingContext);
 
-        // Register ourselves for server and other game events we are interested in
+        ModFeatures.FEATURES.register(modEventBus);
+
+        modEventBus.addListener(this::commonSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::addCreative);
     }
 
-    private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_FLOWING.get(), RenderType.translucent());
-    }
-
-    @SubscribeEvent
-    public static void onCommonSetup(FMLCommonSetupEvent event) {
-        //NetworkHandler.init();
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
+    private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM FACTOROCRAFT");
-        //LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+    }
+
+    // Add the example block item to the building blocks tab
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+
+    }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event)
+    {
+
+    }
+
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
+
+        }
     }
 }

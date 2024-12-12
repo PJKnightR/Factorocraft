@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Factorocraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Factorocraft.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<CopperOreVeinEntity>> COPPER_ORE_VEIN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("copper_ore_vein_block_entity", () ->

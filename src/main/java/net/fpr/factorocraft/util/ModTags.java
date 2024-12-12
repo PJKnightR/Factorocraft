@@ -1,25 +1,15 @@
 package net.fpr.factorocraft.util;
 
 import net.fpr.factorocraft.Factorocraft;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
+import net.minecraft.world.level.biome.Biome;
 
 public class ModTags {
-    public static class Blocks {
-        public static final TagKey<Block> GRASS
-                = tag("grass");
+    public static class Biomes {
 
-        private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(Factorocraft.MOD_ID, name));
-        }
-
-        private static TagKey<Block> forgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("forge", name));
-        }
+        public static TagKey<Biome> IS_ORE_VEIN_SPAWNABLE =
+                TagKey.create(Registries.BIOME, new ResourceLocation(Factorocraft.MOD_ID, "is_ore_vein_spawnable"));
     }
 }

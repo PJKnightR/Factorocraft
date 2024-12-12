@@ -18,7 +18,6 @@
   "item.factorocraft.low_density_structure": "Low Density Structure",
   "item.factorocraft.rocket_control_unit": "Rocket Control Unit",
   "item.factorocraft.rocket_part": "Rocket Part",
-  "item.factorocraft.lubricant_bucket": "Lubricant Bucket",
 
   "block.factorocraft.copper_ore_vein": "Copper Ore Vein",
   "block.factorocraft.iron_ore_vein": "Iron Ore Vein",
@@ -28,9 +27,5 @@
   "block.factorocraft.stone_vein": "Stone Vein",
   "block.factorocraft.redstone_ore_vein": "Redstone Ore Vein",
   "block.factorocraft.oil_well": "Oil Well",
-  "block.factorocraft.oil_sand": "Oil Sand",
-
-  "block.factorocraft.lubricant": "Lubricant",
-  "fluid.factorocraft.lubricant": "Lubricant",
-  "fluid.factorocraft.lubricant_flowing": "Flowing Lubricant"
+  "block.factorocraft.oil_sand": "Oil Sand"
 }
