@@ -2,7 +2,8 @@ package net.fpr.factorocraft.config;
 
 public class WorldGenConfig extends BaseConfig {
 
-    public final ConfigBool generateTestOreVein = b(false, "generateTestOreVein", Comments.generateTestOreVein);
+    public final ConfigBool generateCopperOreVein = b(true, "generateCopperOreVein", Comments.generateCopperOreVein);
+    public final ConfigBool generateIronOreVein = b(true, "generateIronOreVein", Comments.generateIronOreVein);
 
     @Override
     public String getName() {
@@ -10,7 +11,8 @@ public class WorldGenConfig extends BaseConfig {
     }
 
     private static class Comments {
-        static String generateTestOreVein = "Allow the test ore vein to generate.";
+        static String generateCopperOreVein = "Allow Copper Ore Veins to generate.";
+        static String generateIronOreVein = "Allow Iron Ore Veins to generate.";
     }
 
 }

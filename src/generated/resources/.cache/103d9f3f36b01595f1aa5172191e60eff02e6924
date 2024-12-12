@@ -1,4 +1,7 @@
-// 1.20.1	2024-12-10T22:44:10.4170703	Registries
-06f44423d060415dda2286924159046bb5598d13 data/factorocraft/forge/biome_modifier/add_test_feature.json
-73620dc2cf5c2624d2632c4948f4c795c7fdba4a data/factorocraft/worldgen/configured_feature/test_feature.json
-178bf3ab7a8ac21413ecc2d3c72749063b87ac94 data/factorocraft/worldgen/placed_feature/test_feature.json
+// 1.20.1	2024-12-12T00:34:26.5833346	Registries
+82a31f105135c20130f846108c8bc3a774e754d7 data/factorocraft/forge/biome_modifier/add_copper_ore_vein_feature.json
+69ce1afc7d26e5136062799369ab88a5bdafc990 data/factorocraft/forge/biome_modifier/add_iron_ore_vein_feature.json
+4e60e77cf14a1d21bda965e61d5fea44b2a2c285 data/factorocraft/worldgen/configured_feature/copper_ore_vein_feature.json
+40245f24dc16eb1d110d8403d9c01f137664dbb4 data/factorocraft/worldgen/configured_feature/iron_ore_vein_feature.json
+3da8615b310173c8a024303ed33e47aaf8e3354f data/factorocraft/worldgen/placed_feature/copper_ore_vein_feature.json
+7caaaef39c64a68a118743616bdad72253cee4dc data/factorocraft/worldgen/placed_feature/iron_ore_vein_feature.json

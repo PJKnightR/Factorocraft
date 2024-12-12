@@ -15,14 +15,23 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> TEST_FEATURE_KEY = registerKey("test_feature");
-
+    public static final ResourceKey<PlacedFeature> COPPER_ORE_VEIN_FEATURE_KEY = registerKey("copper_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> IRON_ORE_VEIN_FEATURE_KEY = registerKey("iron_ore_vein_feature");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, TEST_FEATURE_KEY,
-                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.TEST_FEATURE),
+        register(context, COPPER_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.COPPER_ORE_VEIN_FEATURE),
+                List.of(
+                        CountPlacement.of(UniformInt.of(0, 1)),
+                        RarityFilter.onAverageOnceEvery(15),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                ));
+
+        register(context, IRON_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.IRON_ORE_VEIN_FEATURE),
                 List.of(
                         CountPlacement.of(UniformInt.of(0, 1)),
                         RarityFilter.onAverageOnceEvery(15),

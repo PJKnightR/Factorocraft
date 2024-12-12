@@ -59,8 +59,6 @@ public class ModConfigs {
 
         for (Entry<ModConfig.Type, BaseConfig> pair : CONFIGS.entrySet())
             context.registerConfig(pair.getKey(), pair.getValue().specification);
-
-        //BlockStressValues.registerProvider(context.getActiveNamespace(), server().kinetics.stressValues);
     }
 
     @SubscribeEvent

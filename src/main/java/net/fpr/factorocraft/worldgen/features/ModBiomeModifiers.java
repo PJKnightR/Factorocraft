@@ -16,15 +16,21 @@ import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_TEST_FEATURE = registerKey("add_test_feature");
+    public static final ResourceKey<BiomeModifier> ADD_COPPER_ORE_VEIN_FEATURE = registerKey("add_copper_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_IRON_ORE_VEIN_FEATURE = registerKey("add_iron_ore_vein_feature");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_TEST_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_COPPER_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.TEST_FEATURE_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.COPPER_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_IRON_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.IRON_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
     }
 
