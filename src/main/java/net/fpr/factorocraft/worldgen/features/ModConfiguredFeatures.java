@@ -15,13 +15,23 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public class ModConfiguredFeatures {
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COAL_ORE_VEIN_FEATURE = registerKey("coal_ore_vein_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COPPER_ORE_VEIN_FEATURE = registerKey("copper_ore_vein_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> IRON_ORE_VEIN_FEATURE = registerKey("iron_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_ORE_VEIN_FEATURE = registerKey("redstone_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_VEIN_FEATURE = registerKey("stone_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TIN_ORE_VEIN_FEATURE = registerKey("tin_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> URANIUM_ORE_VEIN_FEATURE = registerKey("uranium_ore_vein_feature");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
+        register(context, COAL_ORE_VEIN_FEATURE, ModFeatures.COAL_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
         register(context, COPPER_ORE_VEIN_FEATURE, ModFeatures.COPPER_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
         register(context, IRON_ORE_VEIN_FEATURE, ModFeatures.IRON_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, REDSTONE_ORE_VEIN_FEATURE, ModFeatures.REDSTONE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, STONE_VEIN_FEATURE, ModFeatures.STONE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, TIN_ORE_VEIN_FEATURE, ModFeatures.TIN_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, URANIUM_ORE_VEIN_FEATURE, ModFeatures.URANIUM_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

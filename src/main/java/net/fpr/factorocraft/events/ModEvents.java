@@ -44,7 +44,9 @@ public class ModEvents {
                     } else if (blockEntity instanceof RedstoneOreVeinEntity) {
                         ((RedstoneOreVeinEntity) blockEntity).dropItem((Level) event.getLevel(), new ItemStack(Items.REDSTONE));
                     } else if (blockEntity instanceof UraniumOreVeinEntity) {
-                        ((UraniumOreVeinEntity) blockEntity).dropItem((Level) event.getLevel(), new ItemStack(ModItems.RAW_URANIUM.get()));
+                        //((UraniumOreVeinEntity) blockEntity).dropItem((Level) event.getLevel(), new ItemStack(ModItems.RAW_URANIUM.get()));
+                        //This has been done intentionally for this version
+                        ((UraniumOreVeinEntity) blockEntity).dropItem((Level) event.getLevel(), new ItemStack(Items.RAW_GOLD));
                     } else if (blockEntity instanceof TinOreVeinEntity) {
                         ((TinOreVeinEntity) blockEntity).dropItem((Level) event.getLevel(), new ItemStack(ModItems.RAW_TIN.get()));
                     } else if (blockEntity instanceof StoneVeinEntity) {

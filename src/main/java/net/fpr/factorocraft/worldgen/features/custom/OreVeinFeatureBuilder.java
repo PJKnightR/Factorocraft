@@ -8,16 +8,15 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class OreVeinFeatureBuilder /*extends Feature<NoneFeatureConfiguration>*/ {
+public class OreVeinFeatureBuilder {
     private static final float INCLINATION = 1.5f;
     private static final float BASE_TO_LENGTH_RATIO = 1f;
-    private static final int THICK_MAX = 5;
-    private static final int THICK_MIN = 2;
+    private static final int MIN_RADIUS = 2;
 
-    public static boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context, Block generatedBlock) {
+    public static boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context, Block generatedBlock, int maxRadius) {
         WorldGenLevel worldGenLevel = context.level();
         BlockPos origin = context.origin();
-        int base_radius = context.level().getRandom().nextInt(THICK_MIN, THICK_MAX);
+        int base_radius = context.level().getRandom().nextInt(MIN_RADIUS, maxRadius);
         int length = (int)((context.level().getRandom().nextFloat() + 0.5f) * BASE_TO_LENGTH_RATIO * (float)base_radius);
         float xoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;
         float zoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;

@@ -8,18 +8,18 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class IronOreVeinFeature extends Feature<NoneFeatureConfiguration> {
-    private static final Block GENERATED_BLOCK = ModBlocks.IRON_ORE_VEIN.get();
+public class CoalOreVeinFeature extends Feature<NoneFeatureConfiguration> {
+    private static final Block GENERATED_BLOCK = ModBlocks.COAL_ORE_VEIN.get();
 
-    public IronOreVeinFeature(Codec<NoneFeatureConfiguration> codec) {
+    public CoalOreVeinFeature(Codec<NoneFeatureConfiguration> codec) {
         super(codec);
     }
 
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context) {
-        int MAX_RADIUS = ModConfigs.server().worldGeneration.ironOreVeinMaxRadius.get();
+        int MAX_RADIUS = ModConfigs.server().worldGeneration.coalOreVeinMaxRadius.get();
 
-        if (ModConfigs.server().worldGeneration.generateIronOreVein.get()) {
+        if (ModConfigs.server().worldGeneration.generateCoalOreVein.get()) {
             return OreVeinFeatureBuilder.place(context, GENERATED_BLOCK, MAX_RADIUS);
         }
         return false;
