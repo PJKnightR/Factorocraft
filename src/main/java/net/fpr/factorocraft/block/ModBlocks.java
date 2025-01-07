@@ -2,11 +2,14 @@ package net.fpr.factorocraft.block;
 
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.block.custom.*;
+//import net.fpr.factorocraft.fluid.ModFluids;
 import net.fpr.factorocraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,6 +49,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> OIL_SAND = registerBlock("oil_sand",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND/*, MaterialColor.SAND*/).strength(0.5F).sound(SoundType.SAND)));
+
+    /*public static final RegistryObject<LiquidBlock> LUBRICANT_BLOCK = registerBlock("lubricant_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_LUBRICANT, BlockBehaviour.Properties.copy(Blocks.LAVA).speedFactor(0.5f)));*/
+
+    /*public static final RegistryObject<LiquidBlock> LUBRICANT_BLOCK = BLOCKS.register("lubricant_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_LUBRICANT, BlockBehaviour.Properties.copy(Blocks.WATER)));*/
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

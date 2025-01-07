@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.fpr.factorocraft.block.ModBlocks;
 import net.fpr.factorocraft.block.entity.ModBlockEntities;
 import net.fpr.factorocraft.config.ModConfigs;
+//import net.fpr.factorocraft.fluid.ModFluids;
 import net.fpr.factorocraft.worldgen.features.ModFeatures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,6 +39,7 @@ public class Factorocraft
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        //ModFluids.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
 
