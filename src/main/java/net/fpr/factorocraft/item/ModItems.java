@@ -37,6 +37,18 @@ public class ModItems {
     public static final RegistryObject<Item> SPACE_SCIENCE_PACK = ITEMS.register("science_pack_space",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> BASIC_CIRCUIT = ITEMS.register("basic_control_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ADVANCED_CIRCUIT = ITEMS.register("advanced_control_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ELITE_CIRCUIT = ITEMS.register("elite_control_circuit",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ULTIMATE_CIRCUIT = ITEMS.register("ultimate_control_circuit",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> STONE_CHUNK = ITEMS.register("stone_chunk",
             () -> new Item(new Item.Properties()));
 
