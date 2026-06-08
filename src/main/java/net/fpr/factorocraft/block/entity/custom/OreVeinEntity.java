@@ -1,8 +1,6 @@
 package net.fpr.factorocraft.block.entity.custom;
 
-import net.fpr.factorocraft.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -26,6 +24,11 @@ public class OreVeinEntity extends BlockEntity {
     }
 
     protected void dropItem(Level level, ItemStack itemstack) {}
+
+    /*@Override
+    public void setRemoved() {
+        super.setRemoved();
+    }*/
 
     /*public void setEntityType(BlockEntityType<?> entityType) {
         this.entityType = entityType;

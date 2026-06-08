@@ -48,6 +48,86 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(RedstoneOreVeinEntity::new,
                             ModBlocks.REDSTONE_ORE_VEIN.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<GoldOreVeinEntity>> GOLD_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("gold_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(GoldOreVeinEntity::new,
+                            ModBlocks.GOLD_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LapisOreVeinEntity>> LAPIS_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("lapis_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(LapisOreVeinEntity::new,
+                            ModBlocks.LAPIS_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LeadOreVeinEntity>> LEAD_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("lead_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(LeadOreVeinEntity::new,
+                            ModBlocks.LEAD_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<LithiumOreVeinEntity>> LITHIUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("lithium_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(LithiumOreVeinEntity::new,
+                            ModBlocks.LITHIUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<NickelOreVeinEntity>> NICKEL_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("nickel_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(NickelOreVeinEntity::new,
+                            ModBlocks.NICKEL_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<SilverOreVeinEntity>> SILVER_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("silver_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(SilverOreVeinEntity::new,
+                            ModBlocks.SILVER_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<ZincOreVeinEntity>> ZINC_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("zinc_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(ZincOreVeinEntity::new,
+                            ModBlocks.ZINC_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AluminumOreVeinEntity>> ALUMINUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("aluminum_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(AluminumOreVeinEntity::new,
+                            ModBlocks.ALUMINUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<OsmiumOreVeinEntity>> OSMIUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("osmium_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(OsmiumOreVeinEntity::new,
+                            ModBlocks.OSMIUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<TitaniumOreVeinEntity>> TITANIUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("titanium_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(TitaniumOreVeinEntity::new,
+                            ModBlocks.TITANIUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<PlatinumOreVeinEntity>> PLATINUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("platinum_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(PlatinumOreVeinEntity::new,
+                            ModBlocks.PLATINUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<IridiumOreVeinEntity>> IRIDIUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("iridium_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(IridiumOreVeinEntity::new,
+                            ModBlocks.IRIDIUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<TungstenOreVeinEntity>> TUNGSTEN_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("tungsten_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(TungstenOreVeinEntity::new,
+                            ModBlocks.TUNGSTEN_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<DeshOreVeinEntity>> DESH_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("desh_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(DeshOreVeinEntity::new,
+                            ModBlocks.DESH_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<OstrumOreVeinEntity>> OSTRUM_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("ostrum_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(OstrumOreVeinEntity::new,
+                            ModBlocks.OSTRUM_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CaloriteOreVeinEntity>> CALORITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("calorite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(CaloriteOreVeinEntity::new,
+                            ModBlocks.CALORITE_ORE_VEIN.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

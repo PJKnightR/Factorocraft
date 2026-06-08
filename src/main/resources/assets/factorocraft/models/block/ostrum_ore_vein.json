@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/ostrum_ore_vein",
+    "up": "factorocraft:block/ostrum_ore_vein",
+    "north": "factorocraft:block/ostrum_ore_vein",
+    "east": "factorocraft:block/ostrum_ore_vein",
+    "south": "factorocraft:block/ostrum_ore_vein",
+    "west": "factorocraft:block/ostrum_ore_vein",
+    "particle": "factorocraft:block/ostrum_ore_vein"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/iridium_ore_vein",
+    "up": "factorocraft:block/iridium_ore_vein",
+    "north": "factorocraft:block/iridium_ore_vein",
+    "east": "factorocraft:block/iridium_ore_vein",
+    "south": "factorocraft:block/iridium_ore_vein",
+    "west": "factorocraft:block/iridium_ore_vein",
+    "particle": "factorocraft:block/iridium_ore_vein"
+  }
+}

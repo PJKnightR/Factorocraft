@@ -41,17 +41,23 @@ public class OreVeinFeatureBuilder {
                     int moveDown = -1;
 
                     // Check for air, water, and replaceable blocks and move down accordingly
-                    while (worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.AIR
+                    // Limited to about 3 blocks down from starting pos
+                    while ((worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.AIR
                             || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.WATER
+                            || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.LAVA
                             || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).is(BlockTags.REPLACEABLE)
                             || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).is(BlockTags.REPLACEABLE_BY_TREES)
                             || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).is(BlockTags.LOGS)
-                            || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).is(BlockTags.FLOWERS)) {
+                            || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).is(BlockTags.FLOWERS))
+                            && center.offset(x, 1 + moveDown, z).getY() > 0 /*&& moveDown >= -4*/) {
                         moveDown--;
                     }
 
-                    worldGenLevel.setBlock(center.offset(x, 1 + moveDown, z),
-                            generatedBlock.defaultBlockState(),3);
+                    //prevent infinite loops and blocks spawning above the void or in bedrock
+                    if ((!(center.offset(x, moveDown, z).getY() <= 0) || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.BEDROCK) /*|| moveDown >= 3*/) {
+                        worldGenLevel.setBlock(center.offset(x, 1 + moveDown, z),
+                                generatedBlock.defaultBlockState(),3);
+                    }
                 }
             }
         }

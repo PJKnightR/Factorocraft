@@ -23,7 +23,7 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FUEL.get()))
-                    .title(Component.translatable("creativetab.tutorial_tab"))
+                    .title(Component.translatable("creativetab.factorocraft"))
                     .displayItems((pParameters, pOutput) -> {
 
                         pOutput.accept(ModItems.AUTOMATION_SCIENCE_PACK.get());
@@ -45,6 +45,27 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.LOW_DENSITY_STRUCTURE.get());
                         pOutput.accept(ModItems.ROCKET_CONTROL_UNIT.get());
                         pOutput.accept(ModItems.ROCKET_PART.get());
+                        pOutput.accept(ModItems.RAW_LEAD.get());
+                        pOutput.accept(ModItems.RAW_LITHIUM.get());
+                        pOutput.accept(ModItems.RAW_NICKEL.get());
+                        pOutput.accept(ModItems.RAW_SILVER.get());
+                        pOutput.accept(ModItems.RAW_ZINC.get());
+                        pOutput.accept(ModItems.RAW_ALUMINUM.get());
+                        pOutput.accept(ModItems.RAW_OSMIUM.get());
+                        pOutput.accept(ModItems.BASIC_CIRCUIT.get());
+                        pOutput.accept(ModItems.ADVANCED_CIRCUIT.get());
+                        pOutput.accept(ModItems.ELITE_CIRCUIT.get());
+                        pOutput.accept(ModItems.ULTIMATE_CIRCUIT.get());
+                        pOutput.accept(ModItems.URANIUM_235.get());
+                        pOutput.accept(ModItems.URANIUM_238.get());
+                        pOutput.accept(ModItems.RAW_TITANIUM.get());
+                        pOutput.accept(ModItems.RAW_PLATINUM.get());
+                        pOutput.accept(ModItems.RAW_IRIDIUM.get());
+                        pOutput.accept(ModItems.RAW_TUNGSTEN.get());
+                        pOutput.accept(ModItems.RAW_DESH.get());
+                        pOutput.accept(ModItems.RAW_OSTRUM.get());
+                        pOutput.accept(ModItems.RAW_CALORITE.get());
+                        pOutput.accept(ModItems.TUNGSTEN_CARBIDE.get());
 
                         pOutput.accept(ModBlocks.COPPER_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.IRON_ORE_VEIN.get());
@@ -53,8 +74,29 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.URANIUM_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.STONE_VEIN.get());
                         pOutput.accept(ModBlocks.REDSTONE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.GOLD_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.LAPIS_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.LEAD_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.LITHIUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.NICKEL_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.SILVER_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.ZINC_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.ALUMINUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.OSMIUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.TITANIUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.PLATINUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.IRIDIUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.TUNGSTEN_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.DESH_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.OSTRUM_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.CALORITE_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.OIL_WELL.get());
                         pOutput.accept(ModBlocks.OIL_SAND.get());
+
+                        /*pOutput.accept(ModItems.POWER_ARMOR_HELMET.get());
+                        pOutput.accept(ModItems.POWER_ARMOR_CHESTPLATE.get());
+                        pOutput.accept(ModItems.POWER_ARMOR_LEGGINGS.get());
+                        pOutput.accept(ModItems.POWER_ARMOR_BOOTS.get());*/
                     })
                     .build());
 

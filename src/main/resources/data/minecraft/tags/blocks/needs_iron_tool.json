@@ -1,7 +1,12 @@
 {
-  "replace": false,
   "values": [
     "factorocraft:redstone_ore_vein",
-    "factorocraft:uranium_ore_vein"
+    "factorocraft:uranium_ore_vein",
+    "factorocraft:gold_ore_vein",
+    "factorocraft:lead_ore_vein",
+    "factorocraft:lithium_ore_vein",
+    "factorocraft:nickel_ore_vein",
+    "factorocraft:silver_ore_vein",
+    "factorocraft:osmium_ore_vein"
   ]
 }

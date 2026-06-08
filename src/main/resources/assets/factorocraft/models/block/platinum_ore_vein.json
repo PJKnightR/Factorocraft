@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/platinum_ore_vein",
+    "up": "factorocraft:block/platinum_ore_vein",
+    "north": "factorocraft:block/platinum_ore_vein",
+    "east": "factorocraft:block/platinum_ore_vein",
+    "south": "factorocraft:block/platinum_ore_vein",
+    "west": "factorocraft:block/platinum_ore_vein",
+    "particle": "factorocraft:block/platinum_ore_vein"
+  }
+}
