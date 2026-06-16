@@ -1,6 +1,7 @@
 package net.fpr.factorocraft.event;
 
 import net.fpr.factorocraft.Factorocraft;
+import net.fpr.factorocraft.block.custom.OreVein;
 import net.fpr.factorocraft.block.entity.custom.*;
 import net.fpr.factorocraft.item.ModItems;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -18,7 +19,13 @@ public class ModEvents {
 
         @SubscribeEvent
         public static void onBreak(BlockEvent.BreakEvent event) {
-
+            /*if (event.getState().getBlock() instanceof OreVein) {
+                if (event.getPlayer() != null) {
+                    if (event.getPlayer().isCreative()) {
+                        ((OreVein) event.getState().getBlock()).setDestroyedByCreativePlayer(true);
+                    }
+                }
+            }*/
             BlockEntity blockEntity = event.getWorld().getBlockEntity(event.getPos());
             if (blockEntity instanceof OreVeinEntity) {
                 //creative mode only can destroy the blocks
