@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#factorocraft:moon_is_ore_vein_spawnable",
+  "features": "factorocraft:moon_titanium_ore_vein_feature",
+  "step": "top_layer_modification"
+}

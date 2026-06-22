@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#factorocraft:end_is_ore_vein_spawnable",
+  "features": "factorocraft:end_platinum_ore_vein_feature",
+  "step": "top_layer_modification"
+}

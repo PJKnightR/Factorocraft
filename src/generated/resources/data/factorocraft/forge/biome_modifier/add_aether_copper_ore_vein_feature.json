@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#factorocraft:aether_is_ore_vein_spawnable",
+  "features": "factorocraft:aether_copper_ore_vein_feature",
+  "step": "top_layer_modification"
+}

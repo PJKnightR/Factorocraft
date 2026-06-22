@@ -1,0 +1,26 @@
+{
+  "feature": "factorocraft:lithium_ore_vein_feature",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 1,
+          "min_inclusive": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 150
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

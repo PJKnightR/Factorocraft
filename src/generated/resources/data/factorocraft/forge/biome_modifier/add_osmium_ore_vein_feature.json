@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#factorocraft:is_ore_vein_spawnable",
+  "features": "factorocraft:osmium_ore_vein_feature",
+  "step": "top_layer_modification"
+}
