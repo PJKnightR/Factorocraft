@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/lapis_ore_vein",
+    "up": "factorocraft:block/lapis_ore_vein",
+    "north": "factorocraft:block/lapis_ore_vein",
+    "east": "factorocraft:block/lapis_ore_vein",
+    "south": "factorocraft:block/lapis_ore_vein",
+    "west": "factorocraft:block/lapis_ore_vein",
+    "particle": "factorocraft:block/lapis_ore_vein"
+  }
+}

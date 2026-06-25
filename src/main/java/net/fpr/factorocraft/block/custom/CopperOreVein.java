@@ -3,11 +3,15 @@ package net.fpr.factorocraft.block.custom;
 import net.fpr.factorocraft.block.entity.ModBlockEntities;
 import net.fpr.factorocraft.block.entity.custom.CopperOreVeinEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CopperOreVein extends BaseEntityBlock {
+public class CopperOreVein extends OreVein {
 
     public CopperOreVein(Properties properties) {
         super(properties);
@@ -20,5 +24,11 @@ public class CopperOreVein extends BaseEntityBlock {
 
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new CopperOreVeinEntity(ModBlockEntities.COPPER_ORE_VEIN_BLOCK_ENTITY.get(), pPos, pState);
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+        popResource(pLevel, pPos, new ItemStack(Items.RAW_COPPER));
     }
 }

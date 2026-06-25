@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#factorocraft:is_ore_vein_spawnable",
+  "features": "factorocraft:platinum_ore_vein_feature",
+  "step": "top_layer_modification"
+}

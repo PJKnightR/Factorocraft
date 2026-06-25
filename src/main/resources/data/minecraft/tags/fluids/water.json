@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "factorocraft:lubricant_flowing",
-    "factorocraft:lubricant_fluid",
-    "minecraft:water",
-    "minecraft:flowing_water"
-  ]
-}

@@ -1,65 +1,129 @@
 package net.fpr.factorocraft;
 
-import com.mojang.logging.LogUtils;
 import net.fpr.factorocraft.block.ModBlocks;
 import net.fpr.factorocraft.block.entity.ModBlockEntities;
-import net.fpr.factorocraft.fluid.ModFluids;
+import net.fpr.factorocraft.config.ModConfigs;
+import net.fpr.factorocraft.item.ModCreativeModeTabs;
 import net.fpr.factorocraft.item.ModItems;
-import net.fpr.factorocraft.world.structure.ModStructures;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.fpr.factorocraft.worldgen.features.ModFeatures;
+import net.neoforged.fml.ModLoadingContext;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+import com.mojang.logging.LogUtils;
+
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Factorocraft.MOD_ID)
-public class Factorocraft
-{
+public class Factorocraft {
+    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "factorocraft";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+    /*// Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MOD_ID);
+    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
+    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
-    public Factorocraft()
-    {
-        // Register the setup method for modloading
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
+    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
+    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
+    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
-        ModFluids.register(eventBus);
+    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
+    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
+            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
-        ModBlockEntities.register(eventBus);
+    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .displayItems((parameters, output) -> {
+                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+            }).build());*/
 
-        ModStructures.register(eventBus);
+    // The constructor for the mod class is the first code that is run when your mod is loaded.
+    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
+    public Factorocraft(IEventBus modEventBus, ModContainer modContainer) {
+        // Register the commonSetup method for modloading
+        modEventBus.addListener(this::commonSetup);
+        ModLoadingContext modLoadingContext = ModLoadingContext.get();
 
-        eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        ModBlockEntities.register(modEventBus);
+
+        ModConfigs.register(modLoadingContext, modContainer);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModFeatures.FEATURES.register(modEventBus);
+
+        // Register ourselves for server and other game events we are interested in.
+        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
+        NeoForge.EVENT_BUS.register(this);
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
+
+        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.LUBRICANT_FLOWING.get(), RenderType.translucent());
+    private void commonSetup(FMLCommonSetupEvent event) {
+        // Some common setup code
+        LOGGER.info("HELLO FROM COMMON SETUP");
+
+        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
+            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
+        }
+
+        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
+
+        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
+    // Add the example block item to the building blocks tab
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            //event.accept(EXAMPLE_BLOCK_ITEM);
+        }
+    }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public static void onCommonSetup(FMLCommonSetupEvent event) {
-        //NetworkHandler.init();
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM FACTOROCRAFT");
-        //LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    public void onServerStarting(ServerStartingEvent event) {
+        // Do something when the server starts
+        LOGGER.info("HELLO from server starting");
     }
 }
