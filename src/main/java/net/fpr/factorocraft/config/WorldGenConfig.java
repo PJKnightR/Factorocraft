@@ -197,6 +197,39 @@ public class WorldGenConfig extends BaseConfig {
     public final ConfigInt glacioIridiumOreVeinMaxRadius = i(3, 2, "glacioIridiumOreVeinMaxRadius", Comments.glacioIridiumOreVeinMaxRadius);
     //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
 
+    //Randomite Ore Veins
+    public final ConfigBool generateRandomiteOreVein = b(false, "generateRandomiteOreVein", Comments.generateRandomiteOreVein);
+    public final ConfigInt randomiteOreVeinMaxRadius = i(3, 2, "randomiteOreVeinMaxRadius", Comments.randomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateNetherRandomiteOreVein = b(false, "generateNetherRandomiteOreVein", Comments.generateNetherRandomiteOreVein);
+    public final ConfigInt netherRandomiteOreVeinMaxRadius = i(3, 2, "netherRandomiteOreVeinMaxRadius", Comments.netherRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateEndRandomiteOreVein = b(false, "generateEndRandomiteOreVein", Comments.generateEndRandomiteOreVein);
+    public final ConfigInt endRandomiteOreVeinMaxRadius = i(3, 2, "endRandomiteOreVeinMaxRadius", Comments.endRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateAetherRandomiteOreVein = b(false, "generateAetherRandomiteOreVein", Comments.generateAetherRandomiteOreVein);
+    public final ConfigInt aetherRandomiteOreVeinMaxRadius = i(3, 2, "aetherRandomiteOreVeinMaxRadius", Comments.aetherRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateMoonRandomiteOreVein = b(false, "generateMoonRandomiteOreVein", Comments.generateMoonRandomiteOreVein);
+    public final ConfigInt moonRandomiteOreVeinMaxRadius = i(3, 2, "moonRandomiteOreVeinMaxRadius", Comments.moonRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateMarsRandomiteOreVein = b(false, "generateMarsRandomiteOreVein", Comments.generateMarsRandomiteOreVein);
+    public final ConfigInt marsRandomiteOreVeinMaxRadius = i(3, 2, "marsRandomiteOreVeinMaxRadius", Comments.marsRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateVenusRandomiteOreVein = b(false, "generateVenusRandomiteOreVein", Comments.generateVenusRandomiteOreVein);
+    public final ConfigInt venusRandomiteOreVeinMaxRadius = i(3, 2, "venusRandomiteOreVeinMaxRadius", Comments.venusRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
+    public final ConfigBool generateGlacioRandomiteOreVein = b(false, "generateGlacioRandomiteOreVein", Comments.generateGlacioRandomiteOreVein);
+    public final ConfigInt glacioRandomiteOreVeinMaxRadius = i(3, 2, "glacioRandomiteOreVeinMaxRadius", Comments.glacioRandomiteOreVeinMaxRadius);
+    //public final ConfigInt venusCaloriteOreVeinAverageChunks = i(15, 1, "venusCaloriteOreVeinAverageChunks", Comments.venusCaloriteOreVeinAverageChunks);
+
     @Override
     public String getName() {
         return "worldGeneration";
@@ -398,6 +431,39 @@ public class WorldGenConfig extends BaseConfig {
         //Glacio Ore Veins
         static String generateGlacioIridiumOreVein = "Allow GLACIO Iridium Ore Veins to generate.";
         static String glacioIridiumOreVeinMaxRadius = "Maximum block radius for GLACIO Iridium Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        //Randomite Ore Veins
+        static String generateRandomiteOreVein = "Allow Randomite Ore Veins to generate.";
+        static String randomiteOreVeinMaxRadius = "Maximum block radius for Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateNetherRandomiteOreVein = "Allow NETHER Randomite Ore Veins to generate.";
+        static String netherRandomiteOreVeinMaxRadius = "Maximum block radius for NETHER Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateEndRandomiteOreVein = "Allow END Randomite Ore Veins to generate.";
+        static String endRandomiteOreVeinMaxRadius = "Maximum block radius for END Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateAetherRandomiteOreVein = "Allow AETHER Randomite Ore Veins to generate.";
+        static String aetherRandomiteOreVeinMaxRadius = "Maximum block radius for AETHER Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateMoonRandomiteOreVein = "Allow MOON Randomite Ore Veins to generate.";
+        static String moonRandomiteOreVeinMaxRadius = "Maximum block radius for MOON Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateMarsRandomiteOreVein = "Allow MARS Randomite Ore Veins to generate.";
+        static String marsRandomiteOreVeinMaxRadius = "Maximum block radius for MARS Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateVenusRandomiteOreVein = "Allow VENUS Randomite Ore Veins to generate.";
+        static String venusRandomiteOreVeinMaxRadius = "Maximum block radius for VENUS Randomite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateGlacioRandomiteOreVein = "Allow GLACIO Randomite Ore Veins to generate.";
+        static String glacioRandomiteOreVeinMaxRadius = "Maximum block radius for GLACIO Randomite Ore Veins.";
         //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
     }
 

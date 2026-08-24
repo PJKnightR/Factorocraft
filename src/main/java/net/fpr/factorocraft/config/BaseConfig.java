@@ -195,4 +195,11 @@ public abstract class BaseConfig {
         }
     }
 
+    public class ConfigDouble extends CValue<Double, DoubleValue> {
+
+        public ConfigDouble(String name, double current, double min, double max, String... comment) {
+            super(name, builder -> builder.defineInRange(name, current, min, max), comment);
+        }
+    }
+
 }

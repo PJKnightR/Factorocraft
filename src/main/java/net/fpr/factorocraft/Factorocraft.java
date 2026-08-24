@@ -2,9 +2,11 @@ package net.fpr.factorocraft;
 
 import net.fpr.factorocraft.block.ModBlocks;
 import net.fpr.factorocraft.block.entity.ModBlockEntities;
+import net.fpr.factorocraft.config.BaseConfig;
 import net.fpr.factorocraft.config.ModConfigs;
 import net.fpr.factorocraft.item.ModCreativeModeTabs;
 import net.fpr.factorocraft.item.ModItems;
+import net.fpr.factorocraft.item.RandomiteDropsResolver;
 import net.fpr.factorocraft.worldgen.features.ModFeatures;
 import net.neoforged.fml.ModLoadingContext;
 import org.slf4j.Logger;
@@ -74,7 +76,7 @@ public class Factorocraft {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Factorocraft(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+        //modEventBus.addListener(this::commonSetup);
         ModLoadingContext modLoadingContext = ModLoadingContext.get();
 
         ModItems.register(modEventBus);
@@ -97,10 +99,13 @@ public class Factorocraft {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        //modContainer.registerConfig(ModConfig.Type.SERVER, BaseConfig.specification);
+
+        //RandomiteDropsResolver.resolveDrops();
     }
 
-    private void commonSetup(FMLCommonSetupEvent event) {
+    /*private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
@@ -111,7 +116,7 @@ public class Factorocraft {
         LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
 
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
-    }
+    }*/
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
