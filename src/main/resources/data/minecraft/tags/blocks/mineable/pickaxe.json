@@ -23,6 +23,23 @@
     "factorocraft:iridium_ore_vein",
     "factorocraft:desh_ore_vein",
     "factorocraft:ostrum_ore_vein",
-    "factorocraft:calorite_ore_vein"
+    "factorocraft:calorite_ore_vein",
+    "factorocraft:randomite_ore_vein",
+    "factorocraft:nether_randomite_ore_vein",
+    "factorocraft:end_randomite_ore_vein",
+    "factorocraft:aether_randomite_ore_vein",
+    "factorocraft:moon_randomite_ore_vein",
+    "factorocraft:mars_randomite_ore_vein",
+    "factorocraft:venus_randomite_ore_vein",
+    "factorocraft:glacio_randomite_ore_vein",
+    "factorocraft:randomite_ore",
+    "factorocraft:deepslate_randomite_ore",
+    "factorocraft:nether_randomite_ore",
+    "factorocraft:end_randomite_ore",
+    "factorocraft:aether_randomite_ore",
+    "factorocraft:moon_randomite_ore",
+    "factorocraft:mars_randomite_ore",
+    "factorocraft:venus_randomite_ore",
+    "factorocraft:glacio_randomite_ore"
   ]
 }

@@ -39,7 +39,6 @@
   "item.factorocraft.raw_ostrum": "Raw Ostrum",
   "item.factorocraft.raw_calorite": "Raw Calorite",
   "item.factorocraft.tungsten_carbide": "Tungsten Carbide",
-
   "block.factorocraft.copper_ore_vein": "Copper Ore Vein",
   "block.factorocraft.iron_ore_vein": "Iron Ore Vein",
   "block.factorocraft.coal_ore_vein": "Coal Ore Vein",
@@ -63,8 +62,24 @@
   "block.factorocraft.desh_ore_vein": "Desh Ore Vein",
   "block.factorocraft.ostrum_ore_vein": "Ostrum Ore Vein",
   "block.factorocraft.calorite_ore_vein": "Calorite Ore Vein",
+  "block.factorocraft.randomite_ore": "Randomite Ore",
+  "block.factorocraft.deepslate_randomite_ore": "Randomite Ore",
+  "block.factorocraft.nether_randomite_ore": "Randomite Ore",
+  "block.factorocraft.end_randomite_ore": "Randomite Ore",
+  "block.factorocraft.aether_randomite_ore": "Randomite Ore",
+  "block.factorocraft.moon_randomite_ore": "Randomite Ore",
+  "block.factorocraft.mars_randomite_ore": "Randomite Ore",
+  "block.factorocraft.venus_randomite_ore": "Randomite Ore",
+  "block.factorocraft.glacio_randomite_ore": "Randomite Ore",
+  "block.factorocraft.randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.nether_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.end_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.aether_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.moon_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.mars_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.venus_randomite_ore_vein": "Randomite Ore Vein",
+  "block.factorocraft.glacio_randomite_ore_vein": "Randomite Ore Vein",
   "block.factorocraft.oil_well": "Oil Well",
   "block.factorocraft.oil_sand": "Oil Sand",
-
   "creativetab.factorocraft": "Factorocraft"
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/deepslate_randomite_ore",
+    "up": "factorocraft:block/deepslate_randomite_ore",
+    "north": "factorocraft:block/deepslate_randomite_ore",
+    "east": "factorocraft:block/deepslate_randomite_ore",
+    "south": "factorocraft:block/deepslate_randomite_ore",
+    "west": "factorocraft:block/deepslate_randomite_ore",
+    "particle": "factorocraft:block/deepslate_randomite_ore"
+  }
+}

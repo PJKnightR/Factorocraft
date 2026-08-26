@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/randomite_ore_vein",
+    "up": "factorocraft:block/randomite_ore_vein",
+    "north": "factorocraft:block/randomite_ore_vein",
+    "east": "factorocraft:block/randomite_ore_vein",
+    "south": "factorocraft:block/randomite_ore_vein",
+    "west": "factorocraft:block/randomite_ore_vein",
+    "particle": "factorocraft:block/randomite_ore_vein"
+  }
+}

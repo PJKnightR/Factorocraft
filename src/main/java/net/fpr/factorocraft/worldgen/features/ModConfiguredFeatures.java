@@ -70,6 +70,24 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_IRIDIUM_ORE_VEIN_FEATURE = registerKey("venus_iridium_ore_vein_feature");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RANDOMITE_ORE_VEIN_FEATURE = registerKey("randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RANDOMITE_ORE_VEIN_FEATURE = registerKey("nether_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_RANDOMITE_ORE_VEIN_FEATURE = registerKey("end_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_RANDOMITE_ORE_VEIN_FEATURE = registerKey("aether_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOON_RANDOMITE_ORE_VEIN_FEATURE = registerKey("moon_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MARS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("mars_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VENUS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("venus_randomite_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_RANDOMITE_ORE_VEIN_FEATURE = registerKey("glacio_randomite_ore_vein_feature");
+
+    /*public static final ResourceKey<ConfiguredFeature<?, ?>> RANDOMITE_ORE_FEATURE = registerKey("randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RANDOMITE_ORE_FEATURE = registerKey("nether_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_RANDOMITE_ORE_FEATURE = registerKey("end_randomite_ore_feature");*/
+    /*public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_RANDOMITE_ORE_FEATURE = registerKey("aether_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MOON_RANDOMITE_ORE_FEATURE = registerKey("moon_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MARS_RANDOMITE_ORE_FEATURE = registerKey("mars_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VENUS_RANDOMITE_ORE_FEATURE = registerKey("venus_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_RANDOMITE_ORE_FEATURE = registerKey("glacio_randomite_ore_feature");*/
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
         register(context, COAL_ORE_VEIN_FEATURE, ModFeatures.COAL_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
@@ -126,6 +144,30 @@ public class ModConfiguredFeatures {
         register(context, VENUS_IRON_ORE_VEIN_FEATURE, ModFeatures.VENUS_IRON_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
 
         register(context, GLACIO_IRIDIUM_ORE_VEIN_FEATURE, ModFeatures.GLACIO_IRIDIUM_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+
+        register(context, RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, NETHER_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.NETHER_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, END_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.END_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, AETHER_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.AETHER_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, MOON_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.MOON_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, MARS_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.MARS_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, VENUS_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.VENUS_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+        register(context, GLACIO_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.GLACIO_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
+
+        /*RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
+
+        List<OreConfiguration.TargetBlockState> overworldRandomiteOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.RANDOMITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RANDOMITE_ORE.get().defaultBlockState()));
+
+        register(context, RANDOMITE_ORE_FEATURE, Feature.ORE, new OreConfiguration(overworldRandomiteOres, 8));
+        register(context, NETHER_RANDOMITE_ORE_FEATURE, Feature.ORE, new OreConfiguration(netherrackReplaceables,
+                ModBlocks.NETHER_RANDOMITE_ORE.get().defaultBlockState(), 8));
+        register(context, END_RANDOMITE_ORE_FEATURE, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.END_RANDOMITE_ORE.get().defaultBlockState(), 8));*/
 
     }
 

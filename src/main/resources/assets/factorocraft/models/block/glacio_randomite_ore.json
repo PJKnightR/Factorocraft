@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/glacio_randomite_ore",
+    "up": "factorocraft:block/glacio_randomite_ore",
+    "north": "factorocraft:block/glacio_randomite_ore",
+    "east": "factorocraft:block/glacio_randomite_ore",
+    "south": "factorocraft:block/glacio_randomite_ore",
+    "west": "factorocraft:block/glacio_randomite_ore",
+    "particle": "factorocraft:block/glacio_randomite_ore"
+  }
+}

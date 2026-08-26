@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#factorocraft:mars_is_ore_vein_spawnable",
+  "features": "factorocraft:mars_randomite_ore_vein_feature",
+  "step": "top_layer_modification"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/moon_randomite_ore",
+    "up": "factorocraft:block/moon_randomite_ore",
+    "north": "factorocraft:block/moon_randomite_ore",
+    "east": "factorocraft:block/moon_randomite_ore",
+    "south": "factorocraft:block/moon_randomite_ore",
+    "west": "factorocraft:block/moon_randomite_ore",
+    "particle": "factorocraft:block/moon_randomite_ore"
+  }
+}

@@ -72,6 +72,24 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_GLACIO_IRIDIUM_ORE_VEIN_FEATURE = registerKey("add_glacio_iridium_ore_vein_feature");
 
+    public static final ResourceKey<BiomeModifier> ADD_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_NETHER_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_nether_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_END_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_end_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_AETHER_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_aether_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_MOON_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_moon_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_MARS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_mars_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_VENUS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_venus_randomite_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_GLACIO_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_glacio_randomite_ore_vein_feature");
+
+    /*public static final ResourceKey<BiomeModifier> ADD_RANDOMITE_ORE = registerKey("add_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_NETHER_RANDOMITE_ORE = registerKey("add_nether_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_END_RANDOMITE_ORE = registerKey("add_end_randomite_ore");*/
+    /*public static final ResourceKey<BiomeModifier> ADD_AETHER_RANDOMITE_ORE = registerKey("add_aether_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_MOON_RANDOMITE_ORE = registerKey("add_moon_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_MARS_RANDOMITE_ORE = registerKey("add_mars_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_VENUS_RANDOMITE_ORE = registerKey("add_venus_randomite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_GLACIO_RANDOMITE_ORE = registerKey("add_glacio_randomite_ore");*/
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -317,6 +335,89 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(ModTags.Biomes.GLACIO_IS_ORE_VEIN_SPAWNABLE),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GLACIO_IRIDIUM_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        //Randomite Ore Veins
+        context.register(ADD_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_NETHER_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.NETHER_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_END_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.END_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_AETHER_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.AETHER_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AETHER_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_MOON_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.MOON_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MOON_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_MARS_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.MARS_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MARS_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_VENUS_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.VENUS_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.VENUS_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_GLACIO_RANDOMITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.GLACIO_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GLACIO_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+
+        //Randomite Ores
+        /*context.register(ADD_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.GLACIO_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RANDOMITE_ORE_FEATURE_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_NETHER_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_RANDOMITE_ORE_FEATURE_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_END_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_RANDOMITE_ORE_FEATURE_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));*/
+
+        /*context.register(ADD_AETHER_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.AETHER_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AETHER_RANDOMITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_MOON_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.MOON_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MOON_RANDOMITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_MARS_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.MARS_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MARS_RANDOMITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_VENUS_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.VENUS_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.VENUS_RANDOMITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_GLACIO_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.GLACIO_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GLACIO_RANDOMITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));*/
 
     }
 

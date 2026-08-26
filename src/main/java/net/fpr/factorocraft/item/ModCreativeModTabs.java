@@ -90,6 +90,23 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DESH_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.OSTRUM_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.CALORITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.NETHER_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.END_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.AETHER_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.MOON_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.MARS_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.VENUS_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.GLACIO_RANDOMITE_ORE.get());
+                        pOutput.accept(ModBlocks.RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.NETHER_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.END_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.AETHER_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.MOON_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.MARS_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.VENUS_RANDOMITE_ORE_VEIN.get());
+                        pOutput.accept(ModBlocks.GLACIO_RANDOMITE_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.OIL_WELL.get());
                         pOutput.accept(ModBlocks.OIL_SAND.get());
 

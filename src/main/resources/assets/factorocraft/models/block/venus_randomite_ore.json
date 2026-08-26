@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/venus_randomite_ore",
+    "up": "factorocraft:block/venus_randomite_ore",
+    "north": "factorocraft:block/venus_randomite_ore",
+    "east": "factorocraft:block/venus_randomite_ore",
+    "south": "factorocraft:block/venus_randomite_ore",
+    "west": "factorocraft:block/venus_randomite_ore",
+    "particle": "factorocraft:block/venus_randomite_ore"
+  }
+}

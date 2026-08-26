@@ -128,6 +128,46 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(CaloriteOreVeinEntity::new,
                             ModBlocks.CALORITE_ORE_VEIN.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> NETHER_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("nether_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.NETHER_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> END_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("end_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.END_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> AETHER_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("aether_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.AETHER_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> MOON_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("moon_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.MOON_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> MARS_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mars_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.MARS_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> VENUS_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("venus_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.VENUS_RANDOMITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<RandomiteOreVeinEntity>> GLACIO_RANDOMITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("glacio_randomite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(RandomiteOreVeinEntity::new,
+                            ModBlocks.GLACIO_RANDOMITE_ORE_VEIN.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

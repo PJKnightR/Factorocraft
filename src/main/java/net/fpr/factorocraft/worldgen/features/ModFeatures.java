@@ -3,19 +3,15 @@ package net.fpr.factorocraft.worldgen.features;
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.aether.*;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.end.EndLapisOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.end.EndLeadOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.end.EndPlatinumOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.end.EndSilverOreVeinFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.end.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.glacio.GlacioIridiumOreVeinFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.glacio.GlacioRandomiteOreVeinFeature;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.mars.*;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.MoonAluminumOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.MoonDeshOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.MoonIronOreVeinFeature;
-import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.MoonTitaniumOreVeinFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.nether.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusCaloriteOreVeinFeature;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusIronOreVeinFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusRandomiteOreVeinFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.registries.DeferredRegister;
@@ -221,4 +217,38 @@ public class ModFeatures {
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> GLACIO_IRIDIUM_ORE_VEIN_FEATURE
             = FEATURES.register("glacio_iridium_ore_vein_feature",
             () -> new GlacioIridiumOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+
+    //Randomite Ore Veins
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("randomite_ore_vein_feature",
+            () -> new RandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> NETHER_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("nether_randomite_ore_vein_feature",
+            () -> new NetherRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> END_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("end_randomite_ore_vein_feature",
+            () -> new EndRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> AETHER_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("aether_randomite_ore_vein_feature",
+            () -> new AetherRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> MOON_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("moon_randomite_ore_vein_feature",
+            () -> new MoonRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> MARS_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("mars_randomite_ore_vein_feature",
+            () -> new MarsRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> VENUS_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("venus_randomite_ore_vein_feature",
+            () -> new VenusRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> GLACIO_RANDOMITE_ORE_VEIN_FEATURE
+            = FEATURES.register("glacio_randomite_ore_vein_feature",
+            () -> new GlacioRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
 }

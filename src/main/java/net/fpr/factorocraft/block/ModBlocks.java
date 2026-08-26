@@ -3,6 +3,8 @@ package net.fpr.factorocraft.block;
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.block.custom.*;
 //import net.fpr.factorocraft.fluid.ModFluids;
+import net.fpr.factorocraft.block.custom.randomite.ore.*;
+import net.fpr.factorocraft.block.custom.randomite.vein.*;
 import net.fpr.factorocraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
@@ -92,6 +94,59 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CALORITE_ORE_VEIN = registerBlock("calorite_ore_vein",
             () -> new CaloriteOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(100.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
+
+    //Randomite Ores
+    public static final RegistryObject<Block> RANDOMITE_ORE = registerBlock("randomite_ore",
+            () -> new RandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DEEPSLATE_RANDOMITE_ORE = registerBlock("deepslate_randomite_ore",
+            () -> new RandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(4.5F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> NETHER_RANDOMITE_ORE = registerBlock("nether_randomite_ore",
+            () -> new NetherRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> END_RANDOMITE_ORE = registerBlock("end_randomite_ore",
+            () -> new EndRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> AETHER_RANDOMITE_ORE = registerBlock("aether_randomite_ore",
+            () -> new AetherRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MOON_RANDOMITE_ORE = registerBlock("moon_randomite_ore",
+            () -> new MoonRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MARS_RANDOMITE_ORE = registerBlock("mars_randomite_ore",
+            () -> new MarsRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> VENUS_RANDOMITE_ORE = registerBlock("venus_randomite_ore",
+            () -> new VenusRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> GLACIO_RANDOMITE_ORE = registerBlock("glacio_randomite_ore",
+            () -> new GlacioRandomiteOre(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    //Randomite Ore Veins
+    public static final RegistryObject<Block> RANDOMITE_ORE_VEIN = registerBlock("randomite_ore_vein",
+            () -> new RandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> NETHER_RANDOMITE_ORE_VEIN = registerBlock("nether_randomite_ore_vein",
+            () -> new NetherRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> END_RANDOMITE_ORE_VEIN = registerBlock("end_randomite_ore_vein",
+            () -> new EndRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> AETHER_RANDOMITE_ORE_VEIN = registerBlock("aether_randomite_ore_vein",
+            () -> new AetherRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MOON_RANDOMITE_ORE_VEIN = registerBlock("moon_randomite_ore_vein",
+            () -> new MoonRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> MARS_RANDOMITE_ORE_VEIN = registerBlock("mars_randomite_ore_vein",
+            () -> new MarsRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> VENUS_RANDOMITE_ORE_VEIN = registerBlock("venus_randomite_ore_vein",
+            () -> new VenusRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> GLACIO_RANDOMITE_ORE_VEIN = registerBlock("glacio_randomite_ore_vein",
+            () -> new GlacioRandomiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
 
 
     public static final RegistryObject<Block> OIL_WELL = registerBlock("oil_well",
