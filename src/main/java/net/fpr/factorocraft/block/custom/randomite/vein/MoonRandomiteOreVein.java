@@ -53,7 +53,7 @@ public class MoonRandomiteOreVein extends OreVein {
         if (!RandomiteDropsResolver.moonRandomiteWeightedDrops.isEmpty()) {
             ItemStack drop = new ItemStack(RandomiteDropsResolver.getNextDrop(RandomiteDropsResolver.DropDimension.MOON));
             popResource(pLevel, pPos, drop/*RandomiteDropsResolver.getNextDrop()*/);
-            System.out.println("Dropped: " + drop.getDisplayName());
+            //System.out.println("Dropped: " + drop.getDisplayName());
         }
     }
 }

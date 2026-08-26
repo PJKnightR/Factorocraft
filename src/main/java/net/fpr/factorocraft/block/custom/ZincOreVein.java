@@ -51,12 +51,12 @@ public class ZincOreVein extends OreVein {
     }
 
     public static void dropDefaultItem(Level pLevel, BlockPos pPos) {
-        Optional<Item> immersiveItem = Optional.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("immersiveengineering", "raw_aluminum")));
+        Optional<Item> createItem = Optional.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("create", "raw_zinc")));
         boolean found = false;
 
-        if (immersiveItem.isPresent() && !found) {
-            if (!immersiveItem.get().equals(Items.AIR)) {
-                popResource(pLevel, pPos, new ItemStack(immersiveItem.get()));
+        if (createItem.isPresent() && !found) {
+            if (!createItem.get().equals(Items.AIR)) {
+                popResource(pLevel, pPos, new ItemStack(createItem.get()));
                 found = true;
             }
         }

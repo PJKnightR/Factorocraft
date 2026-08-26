@@ -51,7 +51,7 @@ public class NickelOreVein extends OreVein {
     }
 
     public static void dropDefaultItem(Level pLevel, BlockPos pPos) {
-        Optional<Item> thermalItem = Optional.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("thermal", "raw_lithium")));
+        Optional<Item> thermalItem = Optional.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("thermal", "raw_nickel")));
         Optional<Item> createItem = Optional.of(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("tfmg", "raw_nickel")));
         boolean found = false;
 
