@@ -52,7 +52,7 @@ public class NickelOreVein extends OreVein {
     }
 
     public static void dropDefaultItem(Level pLevel, BlockPos pPos) {
-        Optional<Item> thermalItem = Optional.ofNullable(ForgeRegistries.ITEMS.getValue(new ResourceLocation("thermal", "raw_lithium")));
+        Optional<Item> thermalItem = Optional.ofNullable(ForgeRegistries.ITEMS.getValue(new ResourceLocation("thermal", "raw_nickel")));
         Optional<Item> createItem = Optional.ofNullable(ForgeRegistries.ITEMS.getValue(new ResourceLocation("tfmg", "raw_nickel")));
         boolean found = false;
 
