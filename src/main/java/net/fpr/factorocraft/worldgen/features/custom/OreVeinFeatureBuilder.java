@@ -1,6 +1,7 @@
 package net.fpr.factorocraft.worldgen.features.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
@@ -12,20 +13,29 @@ public class OreVeinFeatureBuilder {
     private static final float INCLINATION = 1.5f;
     private static final float BASE_TO_LENGTH_RATIO = 1f;
     private static final int MIN_RADIUS = 2;
+    private static int MAX_RADIUS;
 
     public static boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context, Block generatedBlock, int maxRadius) {
         WorldGenLevel worldGenLevel = context.level();
         BlockPos origin = context.origin();
-        int base_radius = context.level().getRandom().nextInt(MIN_RADIUS, maxRadius);
-        int length = (int)((context.level().getRandom().nextFloat() + 0.5f) * BASE_TO_LENGTH_RATIO * (float)base_radius);
+        if (maxRadius <= 2 || maxRadius > 100) {
+            MAX_RADIUS = 3;
+        } else {
+            MAX_RADIUS = maxRadius;
+        }
+        /*if (!isFlat(worldGenLevel, origin)) {
+            return false;
+        }*/
+        int base_radius = context.level().getRandom().nextInt(MIN_RADIUS, MAX_RADIUS);
+        int length = (int) ((context.level().getRandom().nextFloat() + 0.5f) * BASE_TO_LENGTH_RATIO * (float) base_radius);
         float xoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;
         float zoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;
 
-        for (int y = -1; y < 1; y++){
-            int x = (int)(xoffset * (float)y);
-            int z = (int)(zoffset * (float)y);
-            float radius = (float)base_radius * (float)(length - y) / (float)(length);
-            if (radius > 0.8){
+        for (int y = -1; y < 1; y++) {
+            int x = (int) (xoffset * (float) y);
+            int z = (int) (zoffset * (float) y);
+            float radius = (float) base_radius * (float) (length - y) / (float) (length);
+            if (radius > 0.8) {
                 circle(context, worldGenLevel, origin.offset(x, y, z), radius, generatedBlock);
             }
         }
@@ -33,11 +43,11 @@ public class OreVeinFeatureBuilder {
     }
 
     public static void circle(FeaturePlaceContext<NoneFeatureConfiguration> context,
-                               WorldGenLevel worldGenLevel, BlockPos center, float radius, Block generatedBlock){
+                              WorldGenLevel worldGenLevel, BlockPos center, float radius, Block generatedBlock) {
         float random_finition = radius > 2f ? context.level().getRandom().nextFloat() - 0.5f : 0f;
-        for (int x = -(int)(radius + 0.5f); x <= radius; x++){
-            for (int z = -(int)(radius + 0.5f); z <= radius; z++){
-                if (x * x + z * z < radius * radius + random_finition){
+        for (int x = -(int) (radius + 0.5f); x <= radius; x++) {
+            for (int z = -(int) (radius + 0.5f); z <= radius; z++) {
+                if (x * x + z * z < radius * radius + random_finition) {
                     int moveDown = -1;
 
                     // Check for air, water, and replaceable blocks and move down accordingly
@@ -56,10 +66,18 @@ public class OreVeinFeatureBuilder {
                     //prevent infinite loops and blocks spawning above the void or in bedrock
                     if ((!(center.offset(x, moveDown, z).getY() <= 0) || worldGenLevel.getBlockState(center.offset(x, moveDown, z)).getBlock() == Blocks.BEDROCK) /*|| moveDown >= 3*/) {
                         worldGenLevel.setBlock(center.offset(x, 1 + moveDown, z),
-                                generatedBlock.defaultBlockState(),3);
+                                generatedBlock.defaultBlockState(), 3);
                     }
                 }
             }
         }
+    }
+
+    private static boolean isFlat(WorldGenLevel level, BlockPos origin) {
+        return BlockPos.betweenClosedStream(origin.offset(-2, 0, -2), origin.offset(2, 0, 2))
+                .filter(pos -> level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP))
+                .filter(pos -> level.getBlockState(pos).isAir())
+                .count() >= 6;
+
     }
 }

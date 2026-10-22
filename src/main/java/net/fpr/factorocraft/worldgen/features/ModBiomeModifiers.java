@@ -2,6 +2,8 @@ package net.fpr.factorocraft.worldgen.features;
 
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.util.ModTags;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -12,6 +14,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +29,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_URANIUM_ORE_VEIN_FEATURE = registerKey("add_uranium_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_GOLD_ORE_VEIN_FEATURE = registerKey("add_gold_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_LAPIS_ORE_VEIN_FEATURE = registerKey("add_lapis_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_DIAMOND_ORE_VEIN_FEATURE = registerKey("add_diamond_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_EMERALD_ORE_VEIN_FEATURE = registerKey("add_emerald_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_LEAD_ORE_VEIN_FEATURE = registerKey("add_lead_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_LITHIUM_ORE_VEIN_FEATURE = registerKey("add_lithium_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_NICKEL_ORE_VEIN_FEATURE = registerKey("add_nickel_ore_vein_feature");
@@ -42,11 +47,13 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_OSMIUM_ORE_VEIN_FEATURE = registerKey("add_nether_osmium_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_PLATINUM_ORE_VEIN_FEATURE = registerKey("add_nether_platinum_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_REDSTONE_ORE_VEIN_FEATURE = registerKey("add_nether_redstone_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_NETHER_NETHERITE_ORE_VEIN_FEATURE = registerKey("add_nether_netherite_ore_vein_feature");
 
     public static final ResourceKey<BiomeModifier> ADD_END_LAPIS_ORE_VEIN_FEATURE = registerKey("add_end_lapis_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_END_LEAD_ORE_VEIN_FEATURE = registerKey("add_end_lead_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_END_PLATINUM_ORE_VEIN_FEATURE = registerKey("add_end_platinum_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_END_SILVER_ORE_VEIN_FEATURE = registerKey("add_end_silver_ore_vein_feature");
+    public static final ResourceKey<BiomeModifier> ADD_END_ENDERITE_ORE_VEIN_FEATURE = registerKey("add_end_enderite_ore_vein_feature");
 
     public static final ResourceKey<BiomeModifier> ADD_AETHER_GOLD_ORE_VEIN_FEATURE = registerKey("add_aether_gold_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_AETHER_SILVER_ORE_VEIN_FEATURE = registerKey("add_aether_silver_ore_vein_feature");
@@ -80,6 +87,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_MARS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_mars_randomite_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_VENUS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_venus_randomite_ore_vein_feature");
     public static final ResourceKey<BiomeModifier> ADD_GLACIO_RANDOMITE_ORE_VEIN_FEATURE = registerKey("add_glacio_randomite_ore_vein_feature");
+
+    public static final ResourceKey<BiomeModifier> ADD_TEST_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("add_test_underground_ore_vein_feature");
 
     /*public static final ResourceKey<BiomeModifier> ADD_RANDOMITE_ORE = registerKey("add_randomite_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RANDOMITE_ORE = registerKey("add_nether_randomite_ore");
@@ -137,6 +146,16 @@ public class ModBiomeModifiers {
         context.register(ADD_LAPIS_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LAPIS_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_DIAMOND_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DIAMOND_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_EMERALD_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.EMERALD_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
 
         context.register(ADD_LEAD_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
@@ -215,6 +234,11 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_REDSTONE_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
 
+        context.register(ADD_NETHER_NETHERITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.NETHER_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_NETHERITE_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
         //End Ore Veins
         context.register(ADD_END_LAPIS_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(ModTags.Biomes.END_IS_ORE_VEIN_SPAWNABLE),
@@ -234,6 +258,11 @@ public class ModBiomeModifiers {
         context.register(ADD_END_SILVER_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(ModTags.Biomes.END_IS_ORE_VEIN_SPAWNABLE),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_SILVER_ORE_VEIN_FEATURE_KEY)),
+                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+
+        context.register(ADD_END_ENDERITE_ORE_VEIN_FEATURE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.END_IS_ORE_VEIN_SPAWNABLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_ENDERITE_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
 
         //Aether Ore Veins
@@ -377,6 +406,13 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GLACIO_RANDOMITE_ORE_VEIN_FEATURE_KEY)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
 
+        /*HolderGetter<Biome> biomeLookup = context.lookup(Registries.BIOME);
+        HolderSet<Biome> isOverworld = biomeLookup.getOrThrow(BiomeTags.IS_OVERWORLD);
+
+        HolderGetter<PlacedFeature> featureLookup = context.lookup(Registries.PLACED_FEATURE);
+        Holder<PlacedFeature> zincOre = featureLookup.getOrThrow(ModPlacedFeatures.TEST_UNDERGROUND_ORE_VEIN_FEATURE_KEY);
+
+        context.register(ADD_TEST_UNDERGROUND_ORE_VEIN_FEATURE, addOre(isOverworld, zincOre));*/
 
         //Randomite Ores
         /*context.register(ADD_RANDOMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
@@ -423,5 +459,9 @@ public class ModBiomeModifiers {
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(Factorocraft.MOD_ID, name));
+    }
+
+    private static ForgeBiomeModifiers.AddFeaturesBiomeModifier addOre(HolderSet<Biome> biomes, Holder<PlacedFeature> feature) {
+        return new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomes, HolderSet.direct(feature), GenerationStep.Decoration.UNDERGROUND_ORES);
     }
 }

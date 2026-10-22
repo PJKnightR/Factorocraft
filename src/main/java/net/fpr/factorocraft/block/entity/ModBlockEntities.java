@@ -58,6 +58,26 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(LapisOreVeinEntity::new,
                             ModBlocks.LAPIS_ORE_VEIN.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<DiamondOreVeinEntity>> DIAMOND_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("diamond_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(DiamondOreVeinEntity::new,
+                            ModBlocks.DIAMOND_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<EmeraldOreVeinEntity>> EMERALD_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("emerald_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(EmeraldOreVeinEntity::new,
+                            ModBlocks.EMERALD_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<NetheriteOreVeinEntity>> NETHERITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("netherite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(NetheriteOreVeinEntity::new,
+                            ModBlocks.NETHERITE_ORE_VEIN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<EnderiteOreVeinEntity>> ENDERITE_ORE_VEIN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("enderite_ore_vein_block_entity", () ->
+                    BlockEntityType.Builder.of(EnderiteOreVeinEntity::new,
+                            ModBlocks.ENDERITE_ORE_VEIN.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<LeadOreVeinEntity>> LEAD_ORE_VEIN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("lead_ore_vein_block_entity", () ->
                     BlockEntityType.Builder.of(LeadOreVeinEntity::new,

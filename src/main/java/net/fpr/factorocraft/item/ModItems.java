@@ -87,6 +87,9 @@ public class ModItems {
     public static final RegistryObject<Item> ROCKET_PART = ITEMS.register("rocket_part",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ENDERITE_SCRAP = ITEMS.register("enderite_scrap",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> RAW_LEAD = ITEMS.register("raw_lead",
             () -> new Item(new Item.Properties()));
 

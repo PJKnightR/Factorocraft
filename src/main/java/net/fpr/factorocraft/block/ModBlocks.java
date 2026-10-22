@@ -53,6 +53,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> LAPIS_ORE_VEIN = registerBlock("lapis_ore_vein",
             () -> new LapisOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
 
+    public static final RegistryObject<Block> DIAMOND_ORE_VEIN = registerBlock("diamond_ore_vein",
+            () -> new DiamondOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(100.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> EMERALD_ORE_VEIN = registerBlock("emerald_ore_vein",
+            () -> new EmeraldOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(75.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> NETHERITE_ORE_VEIN = registerBlock("netherite_ore_vein",
+            () -> new NetheriteOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(125.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> ENDERITE_ORE_VEIN = registerBlock("enderite_ore_vein",
+            () -> new EnderiteOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(150.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
+
     public static final RegistryObject<Block> LEAD_ORE_VEIN = registerBlock("lead_ore_vein",
             () -> new LeadOreVein(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK)));
 

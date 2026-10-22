@@ -38,6 +38,14 @@ public class WorldGenConfig extends BaseConfig {
     public final ConfigInt lapisOreVeinMaxRadius = i(3, 2, "lapisOreVeinMaxRadius", Comments.lapisOreVeinMaxRadius);
     //public final ConfigInt lapisOreVeinAverageChunks = i(15, 1, "lapisOreVeinAverageChunks", Comments.lapisOreVeinAverageChunks);
 
+    public final ConfigBool generateDiamondOreVein = b(false, "generateDiamondOreVein", Comments.generateDiamondOreVein);
+    public final ConfigInt diamondOreVeinMaxRadius = i(3, 2, "diamondOreVeinMaxRadius", Comments.diamondOreVeinMaxRadius);
+    //public final ConfigInt goldOreVeinAverageChunks = i(15, 1, "goldOreVeinAverageChunks", Comments.goldOreVeinAverageChunks);
+
+    public final ConfigBool generateEmeraldOreVein = b(false, "generateEmeraldOreVein", Comments.generateEmeraldOreVein);
+    public final ConfigInt emeraldOreVeinMaxRadius = i(3, 2, "emeraldOreVeinMaxRadius", Comments.emeraldOreVeinMaxRadius);
+    //public final ConfigInt goldOreVeinAverageChunks = i(15, 1, "goldOreVeinAverageChunks", Comments.goldOreVeinAverageChunks);
+
     public final ConfigBool generateLeadOreVein = b(false, "generateLeadOreVein", Comments.generateLeadOreVein);
     public final ConfigInt leadOreVeinMaxRadius = i(3, 2, "leadOreVeinMaxRadius", Comments.leadOreVeinMaxRadius);
     //public final ConfigInt leadOreVeinAverageChunks = i(15, 1, "leadOreVeinAverageChunks", Comments.leadOreVeinAverageChunks);
@@ -99,6 +107,10 @@ public class WorldGenConfig extends BaseConfig {
     public final ConfigInt netherRedstoneOreVeinMaxRadius = i(3, 2, "netherRedstoneOreVeinMaxRadius", Comments.netherRedstoneOreVeinMaxRadius);
     //public final ConfigInt netherGoldOreVeinAverageChunks = i(15, 1, "netherGoldOreVeinAverageChunks", Comments.netherGoldOreVeinAverageChunks);
 
+    public final ConfigBool generateNetherNetheriteOreVein = b(false, "generateNetherNetheriteOreVein", Comments.generateNetherNetheriteOreVein);
+    public final ConfigInt netherNetheriteOreVeinMaxRadius = i(3, 2, "netherNetheriteOreVeinMaxRadius", Comments.netherNetheriteOreVeinMaxRadius);
+    //public final ConfigInt goldOreVeinAverageChunks = i(15, 1, "goldOreVeinAverageChunks", Comments.goldOreVeinAverageChunks);
+
     //End Ore Veins
     public final ConfigBool generateEndLapisOreVein = b(false, "generateEndLapisOreVein", Comments.generateEndLapisOreVein);
     public final ConfigInt endLapisOreVeinMaxRadius = i(3, 2, "endLapisOreVeinMaxRadius", Comments.endLapisOreVeinMaxRadius);
@@ -115,6 +127,10 @@ public class WorldGenConfig extends BaseConfig {
     public final ConfigBool generateEndSilverOreVein = b(false, "generateEndSilverOreVein", Comments.generateEndSilverOreVein);
     public final ConfigInt endSilverOreVeinMaxRadius = i(3, 2, "endSilverOreVeinMaxRadius", Comments.endSilverOreVeinMaxRadius);
     //public final ConfigInt netherGoldOreVeinAverageChunks = i(15, 1, "netherGoldOreVeinAverageChunks", Comments.netherGoldOreVeinAverageChunks);
+
+    public final ConfigBool generateEndEnderiteOreVein = b(false, "generateEndEnderiteOreVein", Comments.generateEndEnderiteOreVein);
+    public final ConfigInt endEnderiteOreVeinMaxRadius = i(3, 2, "endEnderiteOreVeinMaxRadius", Comments.endEnderiteOreVeinMaxRadius);
+    //public final ConfigInt goldOreVeinAverageChunks = i(15, 1, "goldOreVeinAverageChunks", Comments.goldOreVeinAverageChunks);
 
     //Aether Ore Veins
     public final ConfigBool generateAetherGoldOreVein = b(false, "generateAetherGoldOreVein", Comments.generateAetherGoldOreVein);
@@ -272,6 +288,14 @@ public class WorldGenConfig extends BaseConfig {
         static String lapisOreVeinMaxRadius = "Maximum block radius for Lapis Ore Veins.";
         //static String lapisOreVeinAverageChunks = "The average number of chunks between Lapis Ore Veins.";
 
+        static String generateDiamondOreVein = "Allow Diamond Ore Veins to generate.";
+        static String diamondOreVeinMaxRadius = "Maximum block radius for Diamond Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateEmeraldOreVein = "Allow Emerald Ore Veins to generate.";
+        static String emeraldOreVeinMaxRadius = "Maximum block radius for Emerald Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
         static String generateLeadOreVein = "Allow Lead Ore Veins to generate.";
         static String leadOreVeinMaxRadius = "Maximum block radius for Lead Ore Veins.";
         //static String leadOreVeinAverageChunks = "The average number of chunks between Lead Ore Veins.";
@@ -335,6 +359,10 @@ public class WorldGenConfig extends BaseConfig {
         static String netherRedstoneOreVeinMaxRadius = "Maximum block radius for NETHER Redstone Ore Veins.";
         //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
 
+        static String generateNetherNetheriteOreVein = "Allow Nether Netherite Ore Veins to generate.";
+        static String netherNetheriteOreVeinMaxRadius = "Maximum block radius for Nether Netherite Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
         //End Ore Veins
         static String generateEndLapisOreVein = "Allow END Lapis Ore Veins to generate.";
         static String endLapisOreVeinMaxRadius = "Maximum block radius for END Lapis Ore Veins.";
@@ -350,6 +378,10 @@ public class WorldGenConfig extends BaseConfig {
 
         static String generateEndSilverOreVein = "Allow END Silver Ore Veins to generate.";
         static String endSilverOreVeinMaxRadius = "Maximum block radius for END Silver Ore Veins.";
+        //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
+
+        static String generateEndEnderiteOreVein = "Allow End Enderite Ore Veins to generate.";
+        static String endEnderiteOreVeinMaxRadius = "Maximum block radius for End Enderite Ore Veins.";
         //static String goldOreVeinAverageChunks = "The average number of chunks between Gold Ore Veins.";
 
         //Aether Ore Veins
