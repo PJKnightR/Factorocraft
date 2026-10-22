@@ -7,6 +7,8 @@
     "factorocraft:lithium_ore_vein",
     "factorocraft:nickel_ore_vein",
     "factorocraft:silver_ore_vein",
-    "factorocraft:osmium_ore_vein"
+    "factorocraft:osmium_ore_vein",
+    "factorocraft:diamond_ore_vein",
+    "factorocraft:emerald_ore_vein"
   ]
 }

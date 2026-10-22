@@ -9,6 +9,7 @@ import net.fpr.factorocraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
@@ -48,6 +49,18 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> LAPIS_ORE_VEIN = registerBlock("lapis_ore_vein",
             () -> new LapisOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> DIAMOND_ORE_VEIN = registerBlock("diamond_ore_vein",
+            () -> new DiamondOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(100.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> EMERALD_ORE_VEIN = registerBlock("emerald_ore_vein",
+            () -> new EmeraldOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(75.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> NETHERITE_ORE_VEIN = registerBlock("netherite_ore_vein",
+            () -> new NetheriteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(125.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> ENDERITE_ORE_VEIN = registerBlock("enderite_ore_vein",
+            () -> new EnderiteOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(150.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> LEAD_ORE_VEIN = registerBlock("lead_ore_vein",
             () -> new LeadOreVein(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(25.0F, 1200.0F).pushReaction(PushReaction.BLOCK).sound(SoundType.STONE)));

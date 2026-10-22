@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "factorocraft:block/netherite_ore_vein",
+    "up": "factorocraft:block/netherite_ore_vein",
+    "north": "factorocraft:block/netherite_ore_vein",
+    "east": "factorocraft:block/netherite_ore_vein",
+    "south": "factorocraft:block/netherite_ore_vein",
+    "west": "factorocraft:block/netherite_ore_vein",
+    "particle": "factorocraft:block/netherite_ore_vein"
+  }
+}

@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> URANIUM_ORE_VEIN_FEATURE_KEY = registerKey("uranium_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> GOLD_ORE_VEIN_FEATURE_KEY = registerKey("gold_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> LAPIS_ORE_VEIN_FEATURE_KEY = registerKey("lapis_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> DIAMOND_ORE_VEIN_FEATURE_KEY = registerKey("diamond_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> EMERALD_ORE_VEIN_FEATURE_KEY = registerKey("emerald_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> LEAD_ORE_VEIN_FEATURE_KEY = registerKey("lead_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> LITHIUM_ORE_VEIN_FEATURE_KEY = registerKey("lithium_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> NICKEL_ORE_VEIN_FEATURE_KEY = registerKey("nickel_ore_vein_feature");
@@ -41,11 +43,13 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_OSMIUM_ORE_VEIN_FEATURE_KEY = registerKey("nether_osmium_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> NETHER_PLATINUM_ORE_VEIN_FEATURE_KEY = registerKey("nether_platinum_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_ORE_VEIN_FEATURE_KEY = registerKey("nether_redstone_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> NETHER_NETHERITE_ORE_VEIN_FEATURE_KEY = registerKey("nether_netherite_ore_vein_feature");
 
     public static final ResourceKey<PlacedFeature> END_LAPIS_ORE_VEIN_FEATURE_KEY = registerKey("end_lapis_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> END_LEAD_ORE_VEIN_FEATURE_KEY = registerKey("end_lead_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> END_PLATINUM_ORE_VEIN_FEATURE_KEY = registerKey("end_platinum_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> END_SILVER_ORE_VEIN_FEATURE_KEY = registerKey("end_silver_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> END_ENDERITE_ORE_VEIN_FEATURE_KEY = registerKey("end_enderite_ore_vein_feature");
 
     public static final ResourceKey<PlacedFeature> AETHER_GOLD_ORE_VEIN_FEATURE_KEY = registerKey("aether_gold_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> AETHER_SILVER_ORE_VEIN_FEATURE_KEY = registerKey("aether_silver_ore_vein_feature");
@@ -80,6 +84,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> VENUS_RANDOMITE_ORE_VEIN_FEATURE_KEY = registerKey("venus_randomite_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> GLACIO_RANDOMITE_ORE_VEIN_FEATURE_KEY = registerKey("glacio_randomite_ore_vein_feature");
 
+    public static final ResourceKey<PlacedFeature> TEST_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("test_underground_ore_vein_feature");
+
     /*public static final ResourceKey<PlacedFeature> RANDOMITE_ORE_FEATURE_KEY = registerKey("randomite_ore_feature");
     public static final ResourceKey<PlacedFeature> NETHER_RANDOMITE_ORE_FEATURE_KEY = registerKey("nether_randomite_ore_feature");
     public static final ResourceKey<PlacedFeature> END_RANDOMITE_ORE_FEATURE_KEY = registerKey("end_randomite_ore_feature");*/
@@ -93,6 +99,8 @@ public class ModPlacedFeatures {
     public static final int URANIUM_ORE_VEIN_CHANCE = 152;
     public static final int GOLD_ORE_VEIN_CHANCE = 148;
     public static final int LAPIS_ORE_VEIN_CHANCE = 128;
+    public static final int DIAMOND_ORE_VEIN_CHANCE = 600;
+    public static final int EMERALD_ORE_VEIN_CHANCE = 600;
     public static final int LEAD_ORE_VEIN_CHANCE = 128;
     public static final int LITHIUM_ORE_VEIN_CHANCE = 150;
     public static final int NICKEL_ORE_VEIN_CHANCE = 150;
@@ -109,11 +117,13 @@ public class ModPlacedFeatures {
     public static final int NETHER_OSMIUM_ORE_VEIN_CHANCE = 35;
     public static final int NETHER_PLATINUM_ORE_VEIN_CHANCE = 60;
     public static final int NETHER_REDSTONE_ORE_VEIN_CHANCE = 25;
+    public static final int NETHER_NETHERITE_ORE_VEIN_CHANCE = 120;
 
     public static final int END_LAPIS_ORE_VEIN_CHANCE = 300;
     public static final int END_LEAD_ORE_VEIN_CHANCE = 300;
     public static final int END_PLATINUM_ORE_VEIN_CHANCE = 500;
     public static final int END_SILVER_ORE_VEIN_CHANCE = 300;
+    public static final int END_ENDERITE_ORE_VEIN_CHANCE = 700;
 
     public static final int AETHER_GOLD_ORE_VEIN_CHANCE = 300;
     public static final int AETHER_SILVER_ORE_VEIN_CHANCE = 300;
@@ -147,6 +157,8 @@ public class ModPlacedFeatures {
     public static final int MARS_RANDOMITE_ORE_VEIN_CHANCE = 128;
     public static final int VENUS_RANDOMITE_ORE_VEIN_CHANCE = 128;
     public static final int GLACIO_RANDOMITE_ORE_VEIN_CHANCE = 128;
+
+    //public static final int TEST_UNDERGROUND_ORE_VEIN_CHANCE = 5;
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -228,6 +240,24 @@ public class ModPlacedFeatures {
                 List.of(
                         CountPlacement.of(UniformInt.of(0, 1)),
                         RarityFilter.onAverageOnceEvery(LAPIS_ORE_VEIN_CHANCE),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                ));
+
+        register(context, DIAMOND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.DIAMOND_ORE_VEIN_FEATURE),
+                List.of(
+                        CountPlacement.of(UniformInt.of(0, 1)),
+                        RarityFilter.onAverageOnceEvery(DIAMOND_ORE_VEIN_CHANCE),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                ));
+
+        register(context, EMERALD_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.EMERALD_ORE_VEIN_FEATURE),
+                List.of(
+                        CountPlacement.of(UniformInt.of(0, 1)),
+                        RarityFilter.onAverageOnceEvery(EMERALD_ORE_VEIN_CHANCE),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()
                 ));
@@ -368,6 +398,15 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()
                 ));
 
+        register(context, NETHER_NETHERITE_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.NETHER_NETHERITE_ORE_VEIN_FEATURE),
+                List.of(
+                        CountPlacement.of(UniformInt.of(0, 1)),
+                        RarityFilter.onAverageOnceEvery(NETHER_NETHERITE_ORE_VEIN_CHANCE),
+                        PlacementUtils.FULL_RANGE,
+                        BiomeFilter.biome()
+                ));
+
         //End Ore Veins
         //Note: For End Dimensions, can be the same as overworld type dimensions
         register(context, END_LAPIS_ORE_VEIN_FEATURE_KEY,
@@ -402,6 +441,15 @@ public class ModPlacedFeatures {
                 List.of(
                         CountPlacement.of(UniformInt.of(0, 1)),
                         RarityFilter.onAverageOnceEvery(END_SILVER_ORE_VEIN_CHANCE),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                ));
+
+        register(context, END_ENDERITE_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.END_ENDERITE_ORE_VEIN_FEATURE),
+                List.of(
+                        CountPlacement.of(UniformInt.of(0, 1)),
+                        RarityFilter.onAverageOnceEvery(END_ENDERITE_ORE_VEIN_CHANCE),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()
                 ));
@@ -655,6 +703,10 @@ public class ModPlacedFeatures {
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()
                 ));
+
+        /*register(context, TEST_UNDERGROUND_ORE_VEIN_FEATURE_KEY, context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.TEST_UNDERGROUND_ORE_VEIN_FEATURE),
+                ModOrePlacement.rareOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)), false));*/
+        /*placement(CountPlacement.of(8), -63, 70))*/
 
         /*register(context, RANDOMITE_ORE_FEATURE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RANDOMITE_ORE_FEATURE),
                 ModOrePlacement.rareOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));

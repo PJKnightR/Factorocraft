@@ -6,6 +6,8 @@
     "factorocraft:iridium_ore_vein",
     "factorocraft:desh_ore_vein",
     "factorocraft:ostrum_ore_vein",
-    "factorocraft:calorite_ore_vein"
+    "factorocraft:calorite_ore_vein",
+    "factorocraft:netherite_ore_vein",
+    "factorocraft:enderite_ore_vein"
   ]
 }

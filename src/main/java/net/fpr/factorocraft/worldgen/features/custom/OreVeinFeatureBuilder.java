@@ -1,6 +1,7 @@
 package net.fpr.factorocraft.worldgen.features.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
@@ -12,11 +13,20 @@ public class OreVeinFeatureBuilder {
     private static final float INCLINATION = 1.5f;
     private static final float BASE_TO_LENGTH_RATIO = 1f;
     private static final int MIN_RADIUS = 2;
+    private static int MAX_RADIUS;
 
     public static boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context, Block generatedBlock, int maxRadius) {
         WorldGenLevel worldGenLevel = context.level();
         BlockPos origin = context.origin();
-        int base_radius = context.level().getRandom().nextInt(MIN_RADIUS, maxRadius);
+        if (maxRadius <= 2 || maxRadius > 100) {
+            MAX_RADIUS = 3;
+        } else {
+            MAX_RADIUS = maxRadius;
+        }
+        /*if (!isFlat(worldGenLevel, origin)) {
+            return false;
+        }*/
+        int base_radius = context.level().getRandom().nextInt(MIN_RADIUS, MAX_RADIUS);
         int length = (int)((context.level().getRandom().nextFloat() + 0.5f) * BASE_TO_LENGTH_RATIO * (float)base_radius);
         float xoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;
         float zoffset = (context.level().getRandom().nextFloat() - 0.5f) * INCLINATION;
@@ -61,5 +71,13 @@ public class OreVeinFeatureBuilder {
                 }
             }
         }
+    }
+
+    private static boolean isFlat(WorldGenLevel level, BlockPos origin) {
+        return BlockPos.betweenClosedStream(origin.offset(-2, 0, -2), origin.offset(2, 0, 2))
+                .filter(pos -> level.getBlockState(pos.below()).isFaceSturdy(level, pos.below(), Direction.UP))
+                .filter(pos -> level.getBlockState(pos).isAir())
+                .count() >= 6;
+
     }
 }

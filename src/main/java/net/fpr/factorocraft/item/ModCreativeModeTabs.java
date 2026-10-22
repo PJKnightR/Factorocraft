@@ -60,6 +60,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_OSTRUM.get());
                         output.accept(ModItems.RAW_CALORITE.get());
                         output.accept(ModItems.TUNGSTEN_CARBIDE.get());
+                        output.accept(ModItems.ENDERITE_SCRAP.get());
 
                         output.accept(ModBlocks.COPPER_ORE_VEIN.get());
                         output.accept(ModBlocks.IRON_ORE_VEIN.get());
@@ -69,6 +70,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STONE_VEIN.get());
                         output.accept(ModBlocks.REDSTONE_ORE_VEIN.get());
                         output.accept(ModBlocks.GOLD_ORE_VEIN.get());
+                        output.accept(ModBlocks.DIAMOND_ORE_VEIN.get());
+                        output.accept(ModBlocks.EMERALD_ORE_VEIN.get());
+                        output.accept(ModBlocks.NETHERITE_ORE_VEIN.get());
+                        output.accept(ModBlocks.ENDERITE_ORE_VEIN.get());
                         output.accept(ModBlocks.LAPIS_ORE_VEIN.get());
                         output.accept(ModBlocks.LEAD_ORE_VEIN.get());
                         output.accept(ModBlocks.LITHIUM_ORE_VEIN.get());

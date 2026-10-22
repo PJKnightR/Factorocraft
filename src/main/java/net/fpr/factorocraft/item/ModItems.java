@@ -82,6 +82,9 @@ public class ModItems {
     public static final DeferredItem<Item> ROCKET_PART = ITEMS.register("rocket_part",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ENDERITE_SCRAP = ITEMS.register("enderite_scrap",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> RAW_LEAD = ITEMS.register("raw_lead",
             () -> new Item(new Item.Properties()));
 

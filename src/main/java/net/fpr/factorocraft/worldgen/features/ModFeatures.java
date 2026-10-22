@@ -65,6 +65,14 @@ public class ModFeatures {
             = FEATURES.register("lapis_ore_vein_feature",
             () -> new LapisOreVeinFeature(NoneFeatureConfiguration.CODEC));
 
+    public static final Supplier<Feature<NoneFeatureConfiguration>> DIAMOND_ORE_VEIN_FEATURE
+            = FEATURES.register("diamond_ore_vein_feature",
+            () -> new DiamondOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final Supplier<Feature<NoneFeatureConfiguration>> EMERALD_ORE_VEIN_FEATURE
+            = FEATURES.register("emerald_ore_vein_feature",
+            () -> new EmeraldOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
     public static final Supplier<Feature<NoneFeatureConfiguration>> LEAD_ORE_VEIN_FEATURE
             = FEATURES.register("lead_ore_vein_feature",
             () -> new LeadOreVeinFeature(NoneFeatureConfiguration.CODEC));
@@ -126,6 +134,10 @@ public class ModFeatures {
             = FEATURES.register("nether_redstone_ore_vein_feature",
             () -> new NetherRedstoneOreVeinFeature(NoneFeatureConfiguration.CODEC));
 
+    public static final Supplier<Feature<NoneFeatureConfiguration>> NETHER_NETHERITE_ORE_VEIN_FEATURE
+            = FEATURES.register("nether_netherite_ore_vein_feature",
+            () -> new NetherNetheriteOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
     //End Ore Veins
     public static final Supplier<Feature<NoneFeatureConfiguration>> END_LAPIS_ORE_VEIN_FEATURE
             = FEATURES.register("end_lapis_ore_vein_feature",
@@ -142,6 +154,10 @@ public class ModFeatures {
     public static final Supplier<Feature<NoneFeatureConfiguration>> END_SILVER_ORE_VEIN_FEATURE
             = FEATURES.register("end_silver_ore_vein_feature",
             () -> new EndSilverOreVeinFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final Supplier<Feature<NoneFeatureConfiguration>> END_ENDERITE_ORE_VEIN_FEATURE
+            = FEATURES.register("end_enderite_ore_vein_feature",
+            () -> new EndEnderiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
 
     //Aether Ore Veins
     public static final Supplier<Feature<NoneFeatureConfiguration>> AETHER_GOLD_ORE_VEIN_FEATURE

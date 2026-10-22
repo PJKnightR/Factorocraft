@@ -39,6 +39,7 @@
   "item.factorocraft.raw_ostrum": "Raw Ostrum",
   "item.factorocraft.raw_calorite": "Raw Calorite",
   "item.factorocraft.tungsten_carbide": "Tungsten Carbide",
+  "item.factorocraft.enderite_scrap": "Enderite Scrap",
 
   "block.factorocraft.copper_ore_vein": "Copper Ore Vein",
   "block.factorocraft.iron_ore_vein": "Iron Ore Vein",
@@ -49,6 +50,10 @@
   "block.factorocraft.redstone_ore_vein": "Redstone Ore Vein",
   "block.factorocraft.gold_ore_vein": "Gold Ore Vein",
   "block.factorocraft.lapis_ore_vein": "Lapis Ore Vein",
+  "block.factorocraft.diamond_ore_vein": "Diamond Ore Vein",
+  "block.factorocraft.emerald_ore_vein": "Emerald Ore Vein",
+  "block.factorocraft.netherite_ore_vein": "Netherite Ore Vein",
+  "block.factorocraft.enderite_ore_vein": "Enderite Ore Vein",
   "block.factorocraft.lead_ore_vein": "Lead Ore Vein",
   "block.factorocraft.lithium_ore_vein": "Lithium Ore Vein",
   "block.factorocraft.nickel_ore_vein": "Nickel Ore Vein",

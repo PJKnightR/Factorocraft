@@ -52,6 +52,15 @@ public class ModTags {
         public static TagKey<Item> DESH_ORE_VEIN_DROP =
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "desh_ore_vein_drop"));
 
+        public static TagKey<Item> DIAMOND_ORE_VEIN_DROP =
+                TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "diamond_ore_vein_drop"));
+
+        public static TagKey<Item> EMERALD_ORE_VEIN_DROP =
+                TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "emerald_ore_vein_drop"));
+
+        public static TagKey<Item> ENDERITE_ORE_VEIN_DROP =
+                TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "enderite_ore_vein_drop"));
+
         public static TagKey<Item> GOLD_ORE_VEIN_DROP =
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "aluminum_ore_vein_drop"));
 
@@ -69,6 +78,9 @@ public class ModTags {
 
         public static TagKey<Item> LITHIUM_ORE_VEIN_DROP =
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "lithium_ore_vein_drop"));
+
+        public static TagKey<Item> NETHERITE_ORE_VEIN_DROP =
+                TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "netherite_ore_vein_drop"));
 
         public static TagKey<Item> NICKEL_ORE_VEIN_DROP =
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "nickel_ore_vein_drop"));
