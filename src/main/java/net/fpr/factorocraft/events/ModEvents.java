@@ -2,6 +2,8 @@ package net.fpr.factorocraft.events;
 
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.block.custom.OreVein;
+import net.fpr.factorocraft.item.ModItems;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 //import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -15,7 +17,7 @@ public class ModEvents {
         public static void onBreak(BlockEvent.BreakEvent event) {
             if (event.getState().getBlock() instanceof OreVein) {
                 if (event.getPlayer() != null) {
-                    if (event.getPlayer().isCreative()) {
+                    if (event.getPlayer().getMainHandItem().getItem().equals((new ItemStack(ModItems.ORE_VEIN_BREAKER.get())).getItem()) || event.getPlayer().isCreative()) {
                         ((OreVein) event.getState().getBlock()).setDestroyedByCreativePlayer(true);
                     }
                 }

@@ -4,6 +4,8 @@ package net.fpr.factorocraft.item;
 //import net.fpr.factorocraft.experimental.Battery;
 //import net.fpr.factorocraft.experimental.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -135,6 +137,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> TUNGSTEN_CARBIDE = ITEMS.register("tungsten_carbide",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<PickaxeItem> ORE_VEIN_BREAKER = ITEMS.register("ore_vein_breaker",
+            () -> new PickaxeItem(Tiers.DIAMOND, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.VEIN_BREAKER, 0.0F, -2.8f))));
 
     // Energy Storage
     /*public static final RegistryObject<Item> BASIC_BATTERY = ITEMS.register(NuminaConstants.MODULE_BATTERY_BASIC__REGNAME,

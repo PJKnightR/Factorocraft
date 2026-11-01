@@ -84,11 +84,25 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> VENUS_RANDOMITE_ORE_VEIN_FEATURE_KEY = registerKey("venus_randomite_ore_vein_feature");
     public static final ResourceKey<PlacedFeature> GLACIO_RANDOMITE_ORE_VEIN_FEATURE_KEY = registerKey("glacio_randomite_ore_vein_feature");
 
-    public static final ResourceKey<PlacedFeature> TEST_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("test_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("redstone_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("diamond_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> EMERALD_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("emerald_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> GOLD_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("gold_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("osmium_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("platinum_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> SILVER_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("silver_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("titanium_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("tungsten_underground_ore_vein_feature");
+    public static final ResourceKey<PlacedFeature> URANIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY = registerKey("uranium_underground_ore_vein_feature");
 
-    /*public static final ResourceKey<PlacedFeature> RANDOMITE_ORE_FEATURE_KEY = registerKey("randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> RANDOMITE_ORE_FEATURE_KEY = registerKey("randomite_ore_feature");
     public static final ResourceKey<PlacedFeature> NETHER_RANDOMITE_ORE_FEATURE_KEY = registerKey("nether_randomite_ore_feature");
-    public static final ResourceKey<PlacedFeature> END_RANDOMITE_ORE_FEATURE_KEY = registerKey("end_randomite_ore_feature");*/
+    public static final ResourceKey<PlacedFeature> END_RANDOMITE_ORE_FEATURE_KEY = registerKey("end_randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> AETHER_RANDOMITE_ORE_FEATURE_KEY = registerKey("aether_randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> MOON_RANDOMITE_ORE_FEATURE_KEY = registerKey("moon_randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> MARS_RANDOMITE_ORE_FEATURE_KEY = registerKey("mars_randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> VENUS_RANDOMITE_ORE_FEATURE_KEY = registerKey("venus_randomite_ore_feature");
+    public static final ResourceKey<PlacedFeature> GLACIO_RANDOMITE_ORE_FEATURE_KEY = registerKey("glacio_randomite_ore_feature");
 
     public static final int COAL_ORE_VEIN_CHANCE = 128;
     public static final int COPPER_ORE_VEIN_CHANCE = 128;
@@ -158,7 +172,25 @@ public class ModPlacedFeatures {
     public static final int VENUS_RANDOMITE_ORE_VEIN_CHANCE = 128;
     public static final int GLACIO_RANDOMITE_ORE_VEIN_CHANCE = 128;
 
-    //public static final int TEST_UNDERGROUND_ORE_VEIN_CHANCE = 5;
+    public static final int REDSTONE_UNDERGROUND_ORE_VEIN_CHANCE = 100;
+    public static final int DIAMOND_UNDERGROUND_ORE_VEIN_CHANCE = 300;
+    public static final int EMERALD_UNDERGROUND_ORE_VEIN_CHANCE = 250;
+    public static final int GOLD_UNDERGROUND_ORE_VEIN_CHANCE = 120;
+    public static final int OSMIUM_UNDERGROUND_ORE_VEIN_CHANCE = 130;
+    public static final int PLATINUM_UNDERGROUND_ORE_VEIN_CHANCE = 200;
+    public static final int SILVER_UNDERGROUND_ORE_VEIN_CHANCE = 110;
+    public static final int TITANIUM_UNDERGROUND_ORE_VEIN_CHANCE = 200;
+    public static final int TUNGSTEN_UNDERGROUND_ORE_VEIN_CHANCE = 200;
+    public static final int URANIUM_UNDERGROUND_ORE_VEIN_CHANCE = 200;
+
+    public static final int RANDOMITE_ORE_CHANCE = 128;
+    public static final int NETHER_RANDOMITE_ORE_CHANCE = 15;
+    public static final int END_RANDOMITE_ORE_CHANCE = 128;
+    public static final int AETHER_RANDOMITE_ORE_CHANCE = 128;
+    public static final int MOON_RANDOMITE_ORE_CHANCE = 128;
+    public static final int MARS_RANDOMITE_ORE_CHANCE = 128;
+    public static final int VENUS_RANDOMITE_ORE_CHANCE = 128;
+    public static final int GLACIO_RANDOMITE_ORE_CHANCE = 128;
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -704,16 +736,185 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()
                 ));
 
-        /*register(context, TEST_UNDERGROUND_ORE_VEIN_FEATURE_KEY, context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.TEST_UNDERGROUND_ORE_VEIN_FEATURE),
-                ModOrePlacement.rareOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)), false));*/
-        /*placement(CountPlacement.of(8), -63, 70))*/
 
-        /*register(context, RANDOMITE_ORE_FEATURE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RANDOMITE_ORE_FEATURE),
-                ModOrePlacement.rareOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-        register(context, NETHER_RANDOMITE_ORE_FEATURE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RANDOMITE_ORE_FEATURE),
-                ModOrePlacement.rareOrePlacement(9, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-        register(context, END_RANDOMITE_ORE_FEATURE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_RANDOMITE_ORE_FEATURE),
-                ModOrePlacement.rareOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));*/
+        //Underground Ore Veins
+        register(context, REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(REDSTONE_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(DIAMOND_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, EMERALD_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.EMERALD_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(EMERALD_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(60)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, GOLD_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.GOLD_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(GOLD_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(OSMIUM_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(60)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(PLATINUM_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, SILVER_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.SILVER_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(SILVER_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(30)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(TITANIUM_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(TUNGSTEN_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, URANIUM_UNDERGROUND_ORE_VEIN_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.URANIUM_UNDERGROUND_ORE_VEIN_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(URANIUM_UNDERGROUND_ORE_VEIN_CHANCE),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(0)),
+                        BiomeFilter.biome()
+                ));
+
+
+        //Randomite Ores
+        register(context, RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.RANDOMITE_ORE_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, NETHER_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.NETHER_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, END_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.END_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        /*CountPlacement.of(UniformInt.of(0, 1)),*/
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        /*register(context, AETHER_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.AETHER_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, MOON_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.MOON_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, MARS_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.MARS_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, VENUS_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.VENUS_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));
+
+        register(context, GLACIO_RANDOMITE_ORE_FEATURE_KEY,
+                context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.GLACIO_RANDOMITE_ORE_FEATURE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)),
+                        BiomeFilter.biome()
+                ));*/
+
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
@@ -724,6 +925,15 @@ public class ModPlacedFeatures {
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
+
+    /*private static List<PlacementModifier> placement(PlacementModifier frequency, int minHeight, int maxHeight) {
+        return List.of(
+                frequency,
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(minHeight), VerticalAnchor.absolute(maxHeight)),
+                ConfigPlacementFilter.INSTANCE
+        );
+    }*/
 
     /*private static List<PlacementModifier> onCaveWallUp(int minPerChunk, int maxPerChunk){
         return List.of(

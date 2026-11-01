@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "factorocraft:item/ore_vein_breaker"
+  }
+}

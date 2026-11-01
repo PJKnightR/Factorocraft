@@ -2,11 +2,14 @@ package net.fpr.factorocraft.worldgen.features;
 
 import net.fpr.factorocraft.Factorocraft;
 import net.fpr.factorocraft.block.ModBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -16,6 +19,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ModConfiguredFeatures {
 
@@ -87,16 +91,25 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> VENUS_RANDOMITE_ORE_VEIN_FEATURE = registerKey("venus_randomite_ore_vein_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_RANDOMITE_ORE_VEIN_FEATURE = registerKey("glacio_randomite_ore_vein_feature");
 
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> TEST_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("test_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("redstone_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("diamond_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("emerald_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLD_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("gold_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("osmium_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("platinum_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("silver_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("titanium_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("tungsten_underground_ore_vein_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> URANIUM_UNDERGROUND_ORE_VEIN_FEATURE = registerKey("uranium_underground_ore_vein_feature");
 
-    /*public static final ResourceKey<ConfiguredFeature<?, ?>> RANDOMITE_ORE_FEATURE = registerKey("randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RANDOMITE_ORE_FEATURE = registerKey("randomite_ore_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RANDOMITE_ORE_FEATURE = registerKey("nether_randomite_ore_feature");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> END_RANDOMITE_ORE_FEATURE = registerKey("end_randomite_ore_feature");*/
-    /*public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_RANDOMITE_ORE_FEATURE = registerKey("aether_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_RANDOMITE_ORE_FEATURE = registerKey("end_randomite_ore_feature");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_RANDOMITE_ORE_FEATURE = registerKey("aether_randomite_ore_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOON_RANDOMITE_ORE_FEATURE = registerKey("moon_randomite_ore_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MARS_RANDOMITE_ORE_FEATURE = registerKey("mars_randomite_ore_feature");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VENUS_RANDOMITE_ORE_FEATURE = registerKey("venus_randomite_ore_feature");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_RANDOMITE_ORE_FEATURE = registerKey("glacio_randomite_ore_feature");*/
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GLACIO_RANDOMITE_ORE_FEATURE = registerKey("glacio_randomite_ore_feature");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -168,23 +181,149 @@ public class ModConfiguredFeatures {
         register(context, VENUS_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.VENUS_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
         register(context, GLACIO_RANDOMITE_ORE_VEIN_FEATURE, ModFeatures.GLACIO_RANDOMITE_ORE_VEIN_FEATURE.get(), new NoneFeatureConfiguration());
 
-        /*RuleTest stoneOreReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest stoneOreReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateOreReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
-        List<OreConfiguration.TargetBlockState> zincTargetStates = List.of(
+        List<OreConfiguration.TargetBlockState> redstoneTargetStates = List.of(
                 OreConfiguration.target(stoneOreReplaceables, ModBlocks.REDSTONE_ORE_VEIN.get()
                         .defaultBlockState()),
                 OreConfiguration.target(deepslateOreReplaceables, ModBlocks.REDSTONE_ORE_VEIN.get()
                         .defaultBlockState())
         );
 
-        register(context, TEST_UNDERGROUND_ORE_VEIN_FEATURE, Feature.ORE, new OreConfiguration(zincTargetStates, 12));*/
+        register(context, REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(redstoneTargetStates, 12));
 
-        /*RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
-        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
+        List<OreConfiguration.TargetBlockState> diamondTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.DIAMOND_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.DIAMOND_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(diamondTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> emeraldTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.EMERALD_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.EMERALD_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, EMERALD_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.EMERALD_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(emeraldTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> goldTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.GOLD_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.GOLD_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, GOLD_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.GOLD_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(goldTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> osmiumTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.OSMIUM_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.OSMIUM_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(osmiumTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> platinumTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.PLATINUM_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.PLATINUM_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(platinumTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> silverTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.SILVER_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.SILVER_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, SILVER_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.SILVER_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(silverTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> titaniumTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.TITANIUM_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.TITANIUM_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(titaniumTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> tungstenTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.TUNGSTEN_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.TUNGSTEN_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(tungstenTargetStates, 12));
+
+
+        List<OreConfiguration.TargetBlockState> uraniumTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.URANIUM_ORE_VEIN.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.URANIUM_ORE_VEIN.get()
+                        .defaultBlockState())
+        );
+
+        register(context, URANIUM_UNDERGROUND_ORE_VEIN_FEATURE, ModFeatures.URANIUM_UNDERGROUND_ORE_VEIN_FEATURE.get(), new OreConfiguration(uraniumTargetStates, 12));
+
+
+
+        List<OreConfiguration.TargetBlockState> randomiteTargetStates = List.of(
+                OreConfiguration.target(stoneOreReplaceables, ModBlocks.RANDOMITE_ORE.get()
+                        .defaultBlockState()),
+                OreConfiguration.target(deepslateOreReplaceables, ModBlocks.DEEPSLATE_RANDOMITE_ORE.get()
+                        .defaultBlockState())
+        );
+
+        register(context, RANDOMITE_ORE_FEATURE, ModFeatures.RANDOMITE_ORE_FEATURE.get(), new OreConfiguration(randomiteTargetStates, 8));
+
+
+        List<OreConfiguration.TargetBlockState> netherRandomiteTargetStates = List.of(
+                OreConfiguration.target(netherrackReplaceables, ModBlocks.NETHER_RANDOMITE_ORE.get()
+                        .defaultBlockState())
+        );
+
+        register(context, NETHER_RANDOMITE_ORE_FEATURE, ModFeatures.NETHER_RANDOMITE_ORE_FEATURE.get(), new OreConfiguration(netherRandomiteTargetStates, 8));
+
+
+        List<OreConfiguration.TargetBlockState> endRandomiteTargetStates = List.of(
+                OreConfiguration.target(endReplaceables, ModBlocks.END_RANDOMITE_ORE.get()
+                        .defaultBlockState())
+        );
+
+        register(context, END_RANDOMITE_ORE_FEATURE, ModFeatures.END_RANDOMITE_ORE_FEATURE.get(), new OreConfiguration(endRandomiteTargetStates, 8));
+
+
+        /*Optional<Block> aetherHolystone = Optional.of(BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("aether", "holystone")));
+        if (aetherHolystone.isPresent()) {
+            List<OreConfiguration.TargetBlockState> aetherRandomiteTargetStates = List.of(
+                    OreConfiguration.target(endReplaceables, aetherHolystone.get()
+                            .defaultBlockState())
+            );
+
+            register(context, AETHER_RANDOMITE_ORE_FEATURE, ModFeatures.AETHER_RANDOMITE_ORE_FEATURE.get(), new OreConfiguration(aetherRandomiteTargetStates, 8));
+        }*/
+
+        /*
         List<OreConfiguration.TargetBlockState> overworldRandomiteOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.RANDOMITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RANDOMITE_ORE.get().defaultBlockState()));
