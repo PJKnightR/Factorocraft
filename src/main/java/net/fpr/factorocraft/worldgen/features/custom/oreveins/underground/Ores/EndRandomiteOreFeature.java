@@ -1,4 +1,4 @@
-package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores;
+package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.Ores;
 
 import com.mojang.serialization.Codec;
 import net.fpr.factorocraft.config.ModConfigs;
@@ -6,15 +6,15 @@ import net.fpr.factorocraft.worldgen.features.custom.UndergroundOreVeinFeatureBu
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 
-public class NetherRandomiteOreFeature extends UndergroundOreVeinFeatureBuilder {
+public class EndRandomiteOreFeature extends UndergroundOreVeinFeatureBuilder {
 
-    public NetherRandomiteOreFeature(Codec<OreConfiguration> codec) {
+    public EndRandomiteOreFeature(Codec<OreConfiguration> codec) {
         super(codec);
     }
 
     @Override
     public boolean place(FeaturePlaceContext<OreConfiguration> context) {
-        if (ModConfigs.server().undergroundGeneration.generateNetherRandomiteOre.get()) {
+        if (ModConfigs.server().undergroundGeneration.generateEndRandomiteOre.get()) {
             return super.place(context);
         }
         return false;

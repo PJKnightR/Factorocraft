@@ -1,21 +1,22 @@
-package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores;
+package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.Ores;
 
 import com.mojang.serialization.Codec;
+import net.fpr.factorocraft.config.ModConfigs;
 import net.fpr.factorocraft.worldgen.features.custom.UndergroundOreVeinFeatureBuilder;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 
-public class GlacioRandomiteOreFeature extends UndergroundOreVeinFeatureBuilder {
+public class RandomiteOreFeature extends UndergroundOreVeinFeatureBuilder {
 
-    public GlacioRandomiteOreFeature(Codec<OreConfiguration> codec) {
+    public RandomiteOreFeature(Codec<OreConfiguration> codec) {
         super(codec);
     }
 
     @Override
     public boolean place(FeaturePlaceContext<OreConfiguration> context) {
-        /*if (ModConfigs.server().undergroundGeneration.generateGlacioRandomiteOre.get()) {
+        if (ModConfigs.server().undergroundGeneration.generateRandomiteOre.get()) {
             return super.place(context);
-        }*/
+        }
         return false;
     }
 }

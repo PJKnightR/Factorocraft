@@ -1,4 +1,4 @@
-package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores;
+package net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.Ores;
 
 import com.mojang.serialization.Codec;
 import net.fpr.factorocraft.worldgen.features.custom.UndergroundOreVeinFeatureBuilder;
