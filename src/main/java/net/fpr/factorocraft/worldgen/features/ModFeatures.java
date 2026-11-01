@@ -9,6 +9,10 @@ import net.fpr.factorocraft.worldgen.features.custom.oreveins.glacio.GlacioRando
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.mars.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.moon.*;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.nether.*;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.*;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores.EndRandomiteOreFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores.NetherRandomiteOreFeature;
+import net.fpr.factorocraft.worldgen.features.custom.oreveins.underground.ores.RandomiteOreFeature;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusCaloriteOreVeinFeature;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusIronOreVeinFeature;
 import net.fpr.factorocraft.worldgen.features.custom.oreveins.venus.VenusRandomiteOreVeinFeature;
@@ -18,6 +22,8 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public class ModFeatures {
 
@@ -270,11 +276,77 @@ public class ModFeatures {
             () -> new GlacioRandomiteOreVeinFeature(NoneFeatureConfiguration.CODEC));
 
 
-    /*public static final RegistryObject<Feature<NoneFeatureConfiguration>> TEST_UNDERGROUND_ORE_VEIN_FEATURE
-            = FEATURES.register("test_underground_ore_vein_feature",
-            () -> new RedstoneOreVeinFeature(NoneFeatureConfiguration.CODEC));*/
+    //Underground Ore Veins
+    public static final Supplier<Feature<OreConfiguration>> REDSTONE_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("redstone_underground_ore_vein_feature",
+            () -> new UndergroundRedstoneOreVeinFeature(OreConfiguration.CODEC));
 
-    /*public static final RegistryObject<Feature<OreConfiguration>> TEST_UNDERGROUND_ORE_VEIN_FEATURE
-            = FEATURES.register("test_underground_ore_vein_feature",
-            () -> new RedstoneOreVeinFeature(NoneFeatureConfiguration.CODEC));*/
+    public static final Supplier<Feature<OreConfiguration>> DIAMOND_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("diamond_underground_ore_vein_feature",
+            () -> new UndergroundDiamondOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> EMERALD_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("emerald_underground_ore_vein_feature",
+            () -> new UndergroundEmeraldOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> GOLD_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("gold_underground_ore_vein_feature",
+            () -> new UndergroundGoldOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> OSMIUM_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("osmium_underground_ore_vein_feature",
+            () -> new UndergroundOsmiumOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> PLATINUM_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("platinum_underground_ore_vein_feature",
+            () -> new UndergroundPlatinumOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> SILVER_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("silver_underground_ore_vein_feature",
+            () -> new UndergroundSilverOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> TITANIUM_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("titanium_underground_ore_vein_feature",
+            () -> new UndergroundTitaniumOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> TUNGSTEN_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("tungsten_underground_ore_vein_feature",
+            () -> new UndergroundTungstenOreVeinFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> URANIUM_UNDERGROUND_ORE_VEIN_FEATURE
+            = FEATURES.register("uranium_underground_ore_vein_feature",
+            () -> new UndergroundUraniumOreVeinFeature(OreConfiguration.CODEC));
+
+
+    public static final Supplier<Feature<OreConfiguration>> RANDOMITE_ORE_FEATURE
+            = FEATURES.register("randomite_ore_feature",
+            () -> new RandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> NETHER_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("nether_randomite_ore_feature",
+            () -> new NetherRandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> END_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("end_randomite_ore_feature",
+            () -> new EndRandomiteOreFeature(OreConfiguration.CODEC));
+
+    /*public static final Supplier<Feature<OreConfiguration>> AETHER_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("aether_randomite_ore_feature",
+            () -> new AetherRandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> MOON_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("moon_randomite_ore_feature",
+            () -> new MoonRandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> MARS_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("mars_randomite_ore_feature",
+            () -> new MarsRandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> VENUS_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("venus_randomite_ore_feature",
+            () -> new VenusRandomiteOreFeature(OreConfiguration.CODEC));
+
+    public static final Supplier<Feature<OreConfiguration>> GLACIO_RANDOMITE_ORE_FEATURE
+            = FEATURES.register("glacio_randomite_ore_feature",
+            () -> new GlacioRandomiteOreFeature(OreConfiguration.CODEC));*/
 }

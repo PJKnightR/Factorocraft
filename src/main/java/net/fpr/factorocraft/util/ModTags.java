@@ -3,9 +3,11 @@ package net.fpr.factorocraft.util;
 import net.fpr.factorocraft.Factorocraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Biomes {
@@ -368,5 +370,10 @@ public class ModTags {
 
         public static TagKey<Item> GLACIO_ORE_VEIN_DROP =
                 TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Factorocraft.MOD_ID, "glacio_ore_vein_drop"));*/
+    }
+
+    public static class Blocks {
+        public static final TagKey<Block> NEEDS_VEIN_BREAKER =
+                BlockTags.create(new ResourceLocation(Factorocraft.MOD_ID, "needs_vein_breaker"));
     }
 }

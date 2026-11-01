@@ -3,10 +3,7 @@ package net.fpr.factorocraft.item;
 //import net.fpr.factorocraft.fluid.ModFluids;
 //import net.fpr.factorocraft.experimental.Battery;
 //import net.fpr.factorocraft.experimental.*;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -140,6 +137,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> TUNGSTEN_CARBIDE = ITEMS.register("tungsten_carbide",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ORE_VEIN_BREAKER = ITEMS.register("ore_vein_breaker",
+            () -> new PickaxeItem(ModToolTiers.VEIN_BREAKER, 0, 0, new Item.Properties()));
 
     // Energy Storage
     /*public static final RegistryObject<Item> BASIC_BATTERY = ITEMS.register(NuminaConstants.MODULE_BATTERY_BASIC__REGNAME,

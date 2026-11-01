@@ -26,7 +26,7 @@ public class ModEvents {
         public static void onBreak(BlockEvent.BreakEvent event) {
             if (event.getState().getBlock() instanceof OreVein) {
                 if (event.getPlayer() != null) {
-                    if (event.getPlayer().isCreative()) {
+                    if (event.getPlayer().getMainHandItem().getItem().equals((new ItemStack(ModItems.ORE_VEIN_BREAKER.get())).getItem()) || event.getPlayer().isCreative()) {
                         ((OreVein) event.getState().getBlock()).setDestroyedByCreativePlayer(true);
                     }
                 }

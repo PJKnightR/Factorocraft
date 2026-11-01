@@ -67,6 +67,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RAW_CALORITE.get());
                         pOutput.accept(ModItems.TUNGSTEN_CARBIDE.get());
                         pOutput.accept(ModItems.ENDERITE_SCRAP.get());
+                        pOutput.accept(ModItems.ORE_VEIN_BREAKER.get());
 
                         pOutput.accept(ModBlocks.COPPER_ORE_VEIN.get());
                         pOutput.accept(ModBlocks.IRON_ORE_VEIN.get());
